@@ -123,7 +123,7 @@ button a:hover{
     display: inline-block;
     font-weight: 800;
     color: var(--secondary);
-    margin-top: 24px;
+    margin-top: 25px;
 }
 .menu-item:last-child{
     margin-right:0;
@@ -199,26 +199,26 @@ button a:hover{
     fill: var(--secondary);
 }
 .phone{
-    width: 25px;
+    width: 19px;
     height: 25px;
-    padding-top: 4px;
-}
-.mail{
-    width: 36px;
-    height: 35px;
     padding-top: 5px;
 }
-.indesign{
-    width: 33px;
+.mail{
+    width: 28px;
+    height: 22px;
+    padding-top: 5px;
+}
+.linkedin{
+    width: 25px;
     height: 32px;
-    padding-top: 0px;
+    padding-top: 1px;
 }
 .icons-wr{
     display: inline-block;   
 }
 .icons-wr{
     float: right;
-    margin-top: 19px;
+    margin-top: 23px;
 }
 .icons-wr li{
     float: left;
@@ -598,6 +598,16 @@ footer{
 }
 .footer-icons .icon:hover svg{
      fill: var(--hover);
+}
+.instagram{
+    width: 22px;
+    height: 21px;
+    padding-top: 3px;
+}
+.telegram{
+    width: 26px;
+    height: 30px;
+    padding-top: 2px;
 }
 .footer-logo{
     color: white;
