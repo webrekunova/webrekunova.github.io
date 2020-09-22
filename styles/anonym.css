@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Conv_Anonymous_Pro_B';
+	src: url('../assets/font/Anonymous_Pro_B.eot');
+    src: local('☺'), url('../assets/font/Anonymous_Pro_B.woff') format('woff'),
+    url('../assets/font/Anonymous_Pro_B.ttf') format('truetype'),
+    url('../assets/font/Anonymous_Pro_B.svg') format('svg');
+	font-weight: 700;
+	font-style: bold;
+}
+
