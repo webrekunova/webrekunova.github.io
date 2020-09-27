@@ -1,0 +1,38 @@
+<svg width="882" height="690" viewBox="0 0 882 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M653.359 44.7753H90.7156C75.7705 44.7753 63.0102 54.5157 62.2344 66.5238L36.3337 463.46C35.558 475.468 47.036 485.193 61.9811 485.193H624.624C639.569 485.193 652.329 475.468 653.105 463.46L678.99 66.5238C679.782 54.5157 668.304 44.7753 653.359 44.7753ZM672.531 80.1147L648.039 440.829C647.295 451.741 635.231 460.583 621.094 460.583C536.346 467.615 443.984 471.907 344.957 471.602C253.576 471.313 167.959 467.158 88.895 460.583C87.581 460.72 78.8102 461.01 71.1793 454.8C66.7939 451.223 64.2609 446.292 64.625 440.829L89.1166 80.1147C90.2565 75.7619 97.5708 66.1433 97.5708 66.1433C97.5708 66.1433 104.109 60.8318 116.062 60.3447C371.253 45.1406 382.114 43.3904 648.277 60.3447C662.414 60.3447 673.275 69.2024 672.531 80.1147Z" fill="url(#paint0_linear)" stroke="black" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M687.698 3.56134H62.8202C46.2128 3.56134 32.0434 16.2086 31.1727 31.8389L2.42229 548.034C1.55155 563.664 14.3119 576.327 30.9035 576.327H655.797C672.388 576.327 686.558 563.664 687.428 548.034L716.179 31.8389C717.049 16.2086 704.305 3.56134 687.698 3.56134ZM678.99 66.5238L653.105 463.46C652.329 475.468 639.569 485.193 624.624 485.193H61.9812C47.036 485.193 35.558 475.468 36.3338 463.46L62.2345 66.5238C63.0102 54.5158 75.7706 44.7754 90.7157 44.7754H653.359C668.304 44.7754 679.782 54.5158 678.99 66.5238Z" fill="#FFABD9" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M694.711 2.2829L859.931 48.2301C859.931 48.2301 883.583 48.8085 879.024 96.0189C874.48 143.229 847.598 575.033 847.598 575.033C847.598 575.033 850.226 615.638 806.578 611.559L620.445 611.849H161.452L22.0061 575.048H656.018C656.018 575.048 686.004 576.403 688.236 536.148L716.432 38.0332C716.448 38.0332 723.113 9.2838 694.711 2.2829Z" fill="url(#paint1_linear)" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M666.483 574.181L803.918 612.092" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<g filter="url(#filter0_d)">
+<path d="M362.381 653.927C453 679.464 535.837 703.464 623.837 679.464C618.002 641.617 506.689 589.464 378.837 589.464C250.985 589.464 146.672 619.617 140.837 657.464C211.118 655.357 285.063 654.082 362.381 653.927Z" fill="url(#paint2_linear)"/>
+<path d="M623.837 679.464C535.837 703.464 453 679.464 362.381 653.927C285.063 654.082 211.118 655.357 140.837 657.464M623.837 679.464C618.002 641.617 506.689 589.464 378.837 589.464C250.985 589.464 146.672 619.617 140.837 657.464M623.837 679.464C535.837 703.464 389 679.464 389 679.464C389 679.464 211.118 655.357 140.837 657.464" stroke="black" stroke-width="3" stroke-miterlimit="10"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="135.08" y="587.964" width="494.444" height="111.667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="36.2912" y1="264.987" x2="679.023" y2="264.987" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC4D9"/>
+<stop offset="1" stop-color="#FF72D9"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="22.0058" y1="307.073" x2="879.621" y2="307.073" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFABD9"/>
+<stop offset="1" stop-color="#BD68B5"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="293" y1="690" x2="383.583" y2="590.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFABD9"/>
+<stop offset="1" stop-color="#BD68B5"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="882" height="690" fill="white"/>
+</clipPath>
+</defs>
+</svg>
