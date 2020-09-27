@@ -183,7 +183,6 @@ button a:hover{
     display: none;
 } 
 .menu-items{
-    width: 100%;
     list-style: none;
     overflow: hidden;
 }
@@ -413,7 +412,7 @@ button a:hover{
 }
 #adobe_logo{
     background: url("../assets/img/adobe_logo.png") no-repeat;
-    background-size: 40%;
+    background-size: 21%;
     background-position: center;
 }
 .fitbit{
@@ -629,10 +628,10 @@ footer{
     float:  right;
     display:  block;
 }
-.contacts{
+/* .contacts{
     overflow: hidden;
 
-}
+} */
 .footer-left {
     display: block;
     float: left;
@@ -640,12 +639,13 @@ footer{
 .footer-menu{
     display: block;
     margin-top: 60px;
+    overflow: hidden;
 }
 .footer-menu a{
     color: var(--selected);
 }
 .footer-menu .menu-items{
-    justify-content: flex-end;
+    float: right;
 }
 .mailto, .call{
     font-family: 'Avenir';
@@ -704,19 +704,25 @@ footer .wr{
 
   @media screen and (max-width: 1100px){
     .about-detail{
-        display: block;
-        float: none;
         margin-top: 80px;
         max-width: 100%;
     }
     .about-text{
         max-width: 100%;
+        text-align: left;
+        float: none;
+    }
+    .about-detail{
+        float: none;
     }
     .detail-key{
         text-align: left;
     }
-    .about-text{
-        text-align: center;
+    .detail-key{
+        font-size: 22px;
+    }
+    .detail-value{
+        font-weight: 500;
     }
     .tile{
         flex-basis: 300px;
@@ -724,6 +730,9 @@ footer .wr{
     }
   }
  @media screen and (max-width: 840px){
+    .wr{
+        padding: 100px 30px;
+      }
      .header-menu{
          display: none;
      }
@@ -757,6 +766,9 @@ footer .wr{
          float: none;
          margin-top: 20px;
      }
+     .footer-left{
+         float: none;
+     }
      .footer-right a{
          text-align: left
      }
@@ -788,7 +800,7 @@ footer .wr{
          margin-top: 140px;
      }
      .footer-menu .menu-items{
-         justify-content: flex-start;
+         float: none;
      }
      .footer-menu .menu-item:last-child{
          display: none;
@@ -822,6 +834,7 @@ footer .wr{
     }
     .detail-key{
         width: 100%;
+        line-height: 35px;
     }
     .studies-wr{
         margin-left: -18px;
@@ -896,10 +909,7 @@ footer .wr{
         width: 80%;
         margin-top: 40px;
     }
-    /* .about-wr{
-        display: flex;
-        flex-direction: column-reverse;
-    } */
+
     .footer-rights{
         margin-top: 140px;
         font-size: 10px
@@ -914,11 +924,7 @@ footer .wr{
         font-size: 40px;
         margin-bottom: 50px
     }
-    .detail-key{
-        font-size: 22px;
-    }.detail-value{
-        font-weight: 500;
-    }
+
     .tile-link{
         background-color: rgb(0 0 0 / 63%);
     }
