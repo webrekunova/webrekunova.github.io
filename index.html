@@ -20,19 +20,19 @@
                     <nav class="header-menu menu">
                         <ul class="menu-items">
                             <li class="menu-item">
-                                <a href="#header" autofocus>Main</a>
+                                <a href="header">Main</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#projects">Projects</a>
+                                <a href="projects">Projects</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#studies">Studies</a>
+                                <a href="studies">Studies</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#about">About</a>
+                                <a href="about">About</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#contacts">Contacts</a>
+                                <a href="contacts">Contacts</a>
                             </li>
                         </ul>
                     </nav>
@@ -95,20 +95,32 @@
                             <div id="eyes"></div>
                         </div>
                     </div>
+                    <span id='head-text'>Hey, it's me,</br>Maria </span>
+                    <span id='arrow'><svg width="100%" height="100%" viewBox="0 0 198 177" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M12.2323 128.787C39.3617 141.7 70.4393 140.974 97.5329 127.958C123.779 115.34 145.289 93.0675 158.458 67.2621C165.815 52.8289 170.645 37.0626 171.846 20.9044C172.113 17.2228 163.099 16.2973 162.82 19.9204C160.812 47.3323 148.319 73.3855 130.163 93.8864C112.669 113.625 88.4132 129.361 61.824 132.385C46.4353 134.126 31.2242 131.337 17.3263 124.719C15.6147 123.897 12.5699 123.553 11.0454 124.998C9.5043 126.422 10.6454 128.036 12.2323 128.787Z"
+                                    fill="#0A0A0A" />
+                                <path
+                                    d="M34.0147 109.668C23.0325 112.955 12.5087 117.512 2.0179 122.111C0.772107 122.655 0.05884 123.526 1.00263 124.718C9.66235 135.654 18.3176 146.627 26.9728 157.601C28.6949 159.775 37.518 159.423 35.0222 156.228C26.3459 145.271 17.7073 134.318 9.05201 123.345C8.70255 124.2 8.36965 125.076 8.04122 125.914C18.532 121.316 29.0559 116.759 40.038 113.472C41.8566 112.916 41.7979 111.33 40.3883 110.371C38.6462 109.164 36.0091 109.075 34.0147 109.668Z"
+                                    fill="#0A0A0A" />
+                            </g>
+                        </svg></span>
                 </div>
-                <p class="header-text"> I’m Maria and I am self-taught digital designer & developer.
-                    You’re looking at my first illustration I roughly created, in order to give it a try and make it
-                    animated.<br />This is how I started and with my
-                    strong desire to grow & improve I am not goint to stop :)
+                <h1 class="header-title">I’m digital designer & developer</h1>
+                <p class="header-text"> You’re looking at my first illustration I roughly created, in order to make it
+                    animated. And that’s how the journey
+                    began.
                 </p>
-                <button class=" header-button button"><a download href="assets/img/cv.pdf">Get the CV</a></button>
-                <a href="#projects" class="down">
+                <button class=" header-button button"><a href="#projects">Explore</a></button>
+                <!-- <a href="#projects" class="down">
                     <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M37.9833 8.24167L21.5 24.725L5.01667 8.24167L0 13.2583L21.5 34.7583L43 13.2583L37.9833 8.24167Z"
                             fill="black" />
                     </svg>
-                </a>
+                </a> -->
             </div>
         </header>
         <section class='projects'>
@@ -167,6 +179,21 @@
                     <div class="tile projects-tile glynd">
                         <a href="" class="tile-link">
                             <span class="tile-logo logo" id="glynd_logo"></span>
+                        </a>
+                    </div>
+                    <div class="tile projects-tile simple">
+                        <a href="" class="tile-link">
+                            <span class="tile-logo logo" id="simple_logo"></span>
+                        </a>
+                    </div>
+                    <div class="tile projects-tile simple">
+                        <a href="" class="tile-link">
+                            <span class="tile-logo logo" id="simple_logo"></span>
+                        </a>
+                    </div>
+                    <div class="tile projects-tile simple">
+                        <a href="" class="tile-link">
+                            <span class="tile-logo logo" id="simple_logo"></span>
                         </a>
                     </div>
                     <div class="tile projects-tile simple">
@@ -233,7 +260,7 @@
     </div>
     <footer class='footer'>
         <div class="wr">
-            <div id="contacts">
+            <div id="contacts" class="contacts">
                 <div class='footer-left'>
                     <h3 class="footer-logo">Maria Rekunova</h3>
                     <span class="footer-city">Kyiv, Ukraine</span>
@@ -243,7 +270,7 @@
                     <a href="mailto:ma.rekunova@gmail.com" class="mailto">ma.rekunova@gmail.com</a>
                     <a href="tel:+380637266043" class="call">+380637266043</a>
                     <ul class="footer-icons icons-wr">
-                        <li><a href="tel:+380637266043" class="telegram icon"><svg viewBox="0 0 33 29" fill="none"
+                        <li><a href="https://t.me/rekunova" class="telegram icon"><svg viewBox="0 0 33 29" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M8.414 16.6638L12.394 26.3021L17.5754 21.2827L26.4592 28.123L32.7143 0.876953L0.714294 13.7895L8.414 16.6638ZM23.5703 8.69412L13.7756 17.3488L12.5556 21.803L10.3019 16.3438L23.5703 8.69412Z" />
@@ -275,7 +302,7 @@
             <nav class="footer-menu menu">
                 <ul class="menu-items">
                     <li class="menu-item">
-                        <a href="#header" autofocus>Main</a>
+                        <a href="#header">Main</a>
                     </li>
                     <li class="menu-item header-menu-item-active">
                         <a href="#projects">Projects</a>

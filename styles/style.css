@@ -24,7 +24,8 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    animation: color 4s infinite; 
+    animation: color 4s infinite;
+    /* overflow: hidden; */
 }
 .header .wr{
     padding-top: 20px;
@@ -80,6 +81,7 @@ button a:hover{
 }
 .container{
     flex: 1;
+    overflow: hidden;
 }
 .wr{
     max-width: 1440px;
@@ -118,17 +120,20 @@ button a:hover{
 .header-line{
     text-align: center;
     margin-bottom: 125px;
+    overflow: hidden;
 }
 .header-logo{
     background: url('../assets/img/logo.svg') no-repeat;
+    background-size: 100%;
+    background-position: center;
     height: 66px;
     width: 113px;
-    left: 80px;
-    display: inline-block;
+    display: block;
     float: left;
 }
 .header-menu{
     text-align: center;
+    /* overflow: hidden; */
 }
 .menu{
     font-family: "Avenir";
@@ -137,6 +142,7 @@ button a:hover{
     font-weight: 800;
     color: var(--secondary);
     margin-top: 25px;
+    clear: both;
 }
 .menu-item:last-child{
     margin-right:0;
@@ -178,12 +184,12 @@ button a:hover{
 } 
 .menu-items{
     width: 100%;
-    display: flex;
     list-style: none;
+    overflow: hidden;
 }
 .menu-item{
     margin-right: 35px;
-    display: inline;
+    float: left;
 }
 .menu-item:hover a{
     color: var(--hover);
@@ -230,9 +236,10 @@ button a:hover{
     display: inline-block;   
 }
 .icons-wr{
-    float: right;
     margin-top: 23px;
+    float: right;
 }
+
 .icons-wr li{
     float: left;
     padding-left: 17px;
@@ -244,18 +251,25 @@ button a:hover{
     /* max-height: 576px; */
     margin-top: 0;
 }
-
+.header-title {
+    font-family: "Avenir";
+    font-size: 50px;
+    font-weight: 800;
+    margin: 90px 0px 0px 0px;
+    text-align: center;
+}
 .header-text{
     font-family: "Avenir";
     font-size: 24px;
     line-height: 30px;
     text-align: center;
-    margin: 60px auto;
-    max-width: 626px;
+    margin: 45px auto 75px;
+    max-width: 526px;
 }
 .header-button{
     margin: 0 auto;
     display: flex;
+    padding: 0 60px;
 }
 .down{
     margin: 100px auto 0px;
@@ -288,11 +302,26 @@ button a:hover{
     width: 294px;
     /* min-height: 250px; */
     margin: 0px auto;
-    /* position: relative; */
+    position: relative;
     height: 325px;
 }
-
-
+#head-text {
+    position:  absolute;
+    top: 50px;
+    left: 400px;
+    max-width: 230px;
+    width: 100%;
+    font-family: "Avenir";
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 38px;
+}
+#arrow {
+    position: absolute;
+    left: 408px;
+    top: 115px;
+    width: 146px;
+}
 #white {
     width: 53%;
     left: 25%;
@@ -384,7 +413,7 @@ button a:hover{
 }
 #adobe_logo{
     background: url("../assets/img/adobe_logo.png") no-repeat;
-    background-size: 50;
+    background-size: 40%;
     background-position: center;
 }
 .fitbit{
@@ -538,20 +567,22 @@ button a:hover{
 /*ABOUT US*/
 .about-wr{
     font-family: 'Avenir';
+    overflow: hidden;
 }
 .about-text{
     max-width: 48%;
     font-size: 22px;
     line-height: 29px;
     font-family: 'Avenir';
-    display: inline-block;
+    display: block;
+    float: left;
 }
 .detail-pair{
     overflow: hidden;
     margin-bottom: 20px;
 }
 .about-detail{
-    display: inline-block;
+    display: block;
     float: right;
     max-width: 47%;
 }
@@ -562,10 +593,11 @@ button a:hover{
     line-height: 22px;
     width: 20%;
     text-align: right;
-    display: inline-block;
+    display: block;
+    float:  left;
 }
 .detail-value{
-    display: inline-block;
+    display: block;
     float: right;
     width: 76%;
     font-size: 18px;
@@ -595,11 +627,15 @@ footer{
 }
 .footer-right {
     float:  right;
-    display:  inline-block;
+    display:  block;
 }
+.contacts{
+    overflow: hidden;
 
+}
 .footer-left {
-    display: inline-block;
+    display: block;
+    float: left;
 }
 .footer-menu{
     display: block;
@@ -698,11 +734,14 @@ footer .wr{
          float: right;
          background-position: center;
          cursor: pointer;
-         margin-top: 30px;
+         margin-top: 19px;
      }
      .header.icons-wr{
          margin: 25px 0px 0px 36px;
          float: left;
+     }
+     .header .icons-wr{
+         float: none;
      }
      #burger-icon svg{
          fill: var(--secondary);
@@ -795,13 +834,25 @@ footer .wr{
 
   /* IPHONE X*/
   @media screen and (max-width: 415px){
+    /* .header-line{
+        position: fixed;
+        background: #ffabd9bf;
+        z-index: 5;
+        width: 100%;
+        margin-left: -30px;
+        margin-top: -19px;
+        padding: 10px 25px;
+    } */
     .wr{
-        padding: 80px 20px;
+        padding: 80px 30px;
       }
     .me{
         width: 170px;
         height: 190px;
 
+    }
+    .header .wr{
+        padding-top: 7px;
     }
     .header-text{
         font-size: 20px;
@@ -811,6 +862,87 @@ footer .wr{
     .down{
         margin: 70px auto
     }
+    #head-text{
+        line-height: 17px;
+        font-size: 12px;
+        left: 186px;
+    }
+    #arrow{
+        left: 199px;
+        width: 43px;
+        top: 80px;
+    }
+    .header-title{
+        font-size: 30px;
+        line-height: 34px;
+        margin-top: 40px;
+        margin-bottom: -10px;
+    }
+    .miley{
+        width: 260px;
+        height: 128px;
+    }
+    .studies-box-link{
+        padding-top: 23px
+    }
+    .studies-wr{
+        margin-top: 78px;
+        margin-bottom:-35px;
+    }
+    .about-text{
+        font-weight: 500;
+    }
+    .about-detail{
+        width: 80%;
+        margin-top: 40px;
+    }
+    /* .about-wr{
+        display: flex;
+        flex-direction: column-reverse;
+    } */
+    .footer-rights{
+        margin-top: 140px;
+        font-size: 10px
+    }
+    .about-text{
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+
+    }
+    .title{
+        font-size: 40px;
+        margin-bottom: 50px
+    }
+    .detail-key{
+        font-size: 22px;
+    }.detail-value{
+        font-weight: 500;
+    }
+    .tile-link{
+        background-color: rgb(0 0 0 / 63%);
+    }
+    .tile-logo{
+        opacity:1;
+    }
+    .header-line{
+        margin-bottom: 40px
+    }
+    .header-logo{
+        height: 47px;
+        width: 73px;
+    }
+    .header .icons-wr{
+        margin-top: 13px;
+    }
+    .tile {
+        flex-basis: 150px;
+        height: 187px;
+    }
+    .footer-menu{
+        display: none;
+    }
+    
 
     
 
