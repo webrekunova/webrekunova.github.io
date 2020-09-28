@@ -7,6 +7,9 @@
     --secondary: #3A3A3A;
     --selected: #8b8b8b;
 }
+.body-project{
+    background: var(--dark);
+}
 .page-container{
     /* background: var(--dark); */
     width: 100%;
@@ -23,13 +26,14 @@
 .project-preview{
     width: 488px;
     height: 394px;
-    background: url('../assets/img/bar.gif') no-repeat;
+    /* background: url('../assets/img/bar.gif') no-repeat; */
     /* background-position: center; */
     position: absolute;
     z-index: -1;
     left: 317px;
     background-size: cover;
     top: 23px;
+    overflow: hidden;
     transform: skew(-9deg, 4deg);
 }
 .pc-wr{

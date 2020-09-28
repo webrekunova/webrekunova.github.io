@@ -18,16 +18,15 @@
     --secondary: #3A3A3A;
     --selected: #8b8b8b;
   }
-
 body{
     font-family: "Avenir" sans-serif;
-    /* background: var(--main); */
     cursor: url("../assets/img/cursor.svg"), default;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+.body-main{
     animation: color 4s infinite;
-    /* overflow: hidden; */
 }
 .header .wr{
     padding-top: 20px;
