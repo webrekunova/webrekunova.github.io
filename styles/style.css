@@ -21,29 +21,21 @@
 body{
     font-family: "Avenir" sans-serif;
     cursor: url("../assets/img/cursor.svg"), default;
+}
+.body-main{
+    animation: color 4s infinite;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
-.body-main{
-    animation: color 4s infinite;
-}
-.header .wr{
-    padding-top: 20px;
-}
 a{
-    color: var(--secondary);
-    /* margin: 9px 0 -15px 0; */
-    display: block;
-    font-size: 18px;
-    line-height: 26px;
     outline: none;
+    display: block;
 }
 body:hover{
     cursor: url("../assets/img/cursor.svg"), default;
 }
 a:hover{
-    color: var(--hover);
     cursor: url("../assets/img/cursor_pointer.svg"), pointer;
 }
 h2{
@@ -60,26 +52,20 @@ h2{
 .button{
 
     height: 54px;
-    padding: 0 40px;
+    width: 208px;
     border: none;
     outline: none;
     cursor: url("../assets/img/cursor_pointer.svg"), pointer;
-    background: var(--dark);
     font-weight: 800;
     text-align: center;
 }
-.button:hover{
-    background: var(--hover);
-}
-.button a{
+.button-link{
     font-family: "Avenir";
     font-size: 24px;
     line-height: 54px;
-    color: var(--contrast);
+    width: 100%;
 }
-button a:hover{
-    color: var(--contrast);
-}
+
 .container{
     flex: 1;
     overflow: hidden;
@@ -100,12 +86,12 @@ button a:hover{
     text-transform: uppercase;
 }
 /*HEADER*/
+.header .wr{
+    padding-top: 20px;
+}
 .header{
-    /* position: relative; */
     width: 100%;
     height: 100%;
-    /* background: var(--main); */
-
 }
 @keyframes color{
     0%{
@@ -148,7 +134,13 @@ button a:hover{
 .menu-item:last-child{
     margin-right:0;
 }
-
+.menu-link{
+    color: var(--secondary);
+    /* margin: 9px 0 -15px 0; */
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+}
  #modal-menu{
     width: 100%;
     height: 500px;
@@ -191,7 +183,7 @@ button a:hover{
     margin-right: 35px;
     float: left;
 }
-.menu-item:hover a{
+.header-menu-link:hover{
     color: var(--hover);
     font-weight: bold;
 }
@@ -210,11 +202,13 @@ button a:hover{
     border-radius: 3px;
     background: var(--secondary);
 }
-
-.icon:hover svg{
+.icon-link{
+    display: block;
+}
+.icon-link:hover svg{
     fill: var(--hover);
 }
-.icon svg{
+.icon-link svg{
     fill: var(--secondary);
 }
 .phone{
@@ -270,7 +264,16 @@ button a:hover{
 .header-button{
     margin: 0 auto;
     display: flex;
-    padding: 0 60px;
+    background: var(--dark);
+}
+.header-button-link{
+    color: var(--contrast);
+}
+.header-button:hover{
+    background: var(--hover);
+}
+.header-button-link:hover{
+    color: var(--contrast);
 }
 .down{
     margin: 100px auto 0px;
@@ -397,6 +400,7 @@ arrow path{
 /*ME*/
 
 
+
 /*PROJECTS*/
 
 .projects-wr{
@@ -430,6 +434,7 @@ arrow path{
     opacity:1
 }
 .tile-link {
+    display: block;
     width:  100%;
     height: 100%;
     background-color: transparent;
@@ -680,22 +685,26 @@ footer{
 
 .footer-button{
     background: var(--hover);
-    display: block;margin-top: 44px;
-;}
+    display: block;
+    margin-top: 44px;
+}
+.footer-button-link{
+    color: var(--contrast);
+}
 .footer-button:hover{
     background: var(--contrast);
 }
-.footer-button:hover a{
+.footer-button-link:hover{
     color: var(--dark);
 }
 .footer-right {
     float:  right;
     display:  block;
 }
-/* .contacts{
+.contacts{
     overflow: hidden;
 
-} */
+}
 .footer-left {
     display: block;
     float: left;
@@ -705,8 +714,11 @@ footer{
     margin-top: 60px;
     overflow: hidden;
 }
-.footer-menu a{
+.footer-menu .menu-link{
     color: var(--selected);
+}
+.footer-menu .menu-link:hover{
+    color: var(--hover);
 }
 .footer-menu .menu-items{
     float: right;
@@ -724,10 +736,10 @@ footer{
 .footer-icons{
     margin-top: 60px;
 }
-.footer-icons .icon svg{
+.footer-icon svg{
      fill: var(--selected);
 }
-.footer-icons .icon:hover svg{
+.footer .icon-link:hover svg{
      fill: var(--hover);
 }
 .instagram{
@@ -919,8 +931,8 @@ footer .wr{
         margin-left: -18px;
     }
     .tile{
-        flex-basis: 100px;
-        height: 120px
+        flex-basis: 150px;
+        height: 194px;
     }
   }
 

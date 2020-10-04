@@ -7,40 +7,62 @@
     --secondary: #3A3A3A;
     --selected: #8b8b8b;
 }
-.body-project{
+.body-campaign{
     background: var(--dark);
+    position: fixed;
+    display: none;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
 }
 .page-container{
     /* background: var(--dark); */
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
+}
+.campaign-wr{
+    position: relative;
+}
+.campaign-content{
+    max-width: 35%;
+    float: left;
+    margin-top: 17px;
+}
+.pc-wr{
+    width: 1052px;
+    height: 900px;
+    /* opacity: 0; */
+    /* margin-top: -20px; */
+    position: absolute;
+    right: 2%;
+    top: 7%;
 }
 .pc{
-    width: 1200px;
-    height: 500px;
-    background: url("../assets/img/pc.svg") no-repeat;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/img/pc5.svg") no-repeat;
     background-position: center;
     background-size: contain;
     z-index: 7;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
 }
-.project-preview{
-    width: 585px;
-    height: 394px;
+.campaign-preview{
+    width: 70%;
+    height: 559px;
     /* background: url('../assets/img/bar.gif') no-repeat; */
     /* background-position: center; */
     position: absolute;
     z-index: -1;
-    left: 317px;
+    left: 6.5%;
     background-size: cover;
-    top: -5px;
+    top: 4%;
     overflow: hidden;
     transform: skew(-4deg, 1deg);
 }
-.pc-wr{
-    position: relative;
-    left: 500px;
-    top: 30px;
-}
+
 .bg{
     width: 100%;
     height: 100%;
@@ -49,10 +71,111 @@
     z-index: -2;
 
 }
-video {
-    width: 100%;
-    height: 100%;
+.campaign-info{
+    margin-bottom: 50px;
+}
+.campaign-info-item{
+    font-family: 'Avenir';
+    font-size: 24px;
+    color:var(--contrast);
+    font-weight: 900;
+    text-transform: uppercase;
+    /* display: block; */
+}
+.campaign-info-item:nth-child(1){
+    min-width: 133px;
+    color: #e2007c;
+}
+.campaign-info-item:nth-child(2){
+    /* margin-left: 10px; */
+    /* float: right; */
+}
+.campaign-pair{
+    max-width: 600px;
+    overflow:hidden;
+    margin-bottom:10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.campaign-description{
+    font-family: 'Avenir';
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--contrast);
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+.campaign-button{
+    background: var(--hover);
+    padding: 0 50px;
+    margin-top: 0;
+}
+.campaign-button:hover{
+    background: var(--contrast);
+    color: var(--dark);
+}
+.campaign-button-link{
+    color: var(--contrast);
+}
+.campaign-video{
+    width: 132%;
+    /* height: 121%; */
     position: absolute;
-    left: -63px;
-    top: 5px;
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+}
+.campaign-button-link:hover{
+    color: var(--dark);
+}
+.back-button{
+    background: url("../assets/img/back2.svg") no-repeat;
+    position: fixed;
+    right: 6%;
+    height: 67px;
+    width: 163px;
+    background-size: contain;
+    bottom: 6%;
+    border: none;
+    outline: none;
+    margin-top: 200px;
+}
+/* .back-button:hover{
+    width: 150px;
+    height: 63px;
+}
+.back-button:hover .back-button-link{
+  left:3px;
+} */
+.back-button-link{
+    font-family: 'Conv_Anonymous_Pro_B';
+    font-size: 20px;
+    line-height: 30px;
+    height: 53px;
+    /* top: 1px; */
+    color: black;
+    text-align: left;
+    width: 141px;
+    background-color: #daceac;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-left: 14px;
+    left: 1px;
+    box-sizing: border-box;
+    padding-top: 9px;
+    /* position: absolute; */
+    background-image: url("../assets/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 80px center;
+    background-size: 40px 40px;
+}
+.back-button-link:hover {
+    width: 148px;
+    height: 61px;
+    top: 1;
+    left:1;
+    padding-top: 14px;    
+
 }
