@@ -38,7 +38,7 @@ function showCampaignPage(name) {
     renderCampaign(campaign);
     campaignPage.style.display = 'block';
 
-    // const body = document.getElementsByTagName(body);
+    // const body = document.querySelector('.body-main');
     // console.log(body);
     // body.style.overflowY = "hidden";
 
