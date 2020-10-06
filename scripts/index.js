@@ -36,11 +36,11 @@ function showCampaignPage(name) {
     const campaignPage = document.querySelector('.body-campaign')
     const campaign = campaigns.find(x => x.name === name);
     renderCampaign(campaign);
-    campaignPage.style.display = 'block';
+    campaignPage.style.visibility = 'visible';
 
-    // const body = document.querySelector('.body-main');
-    // console.log(body);
-    // body.style.overflowY = "hidden";
+    const body = document.querySelector('.body-main');
+    console.log(body);
+    body.style.display = "none";
 
 }
 
