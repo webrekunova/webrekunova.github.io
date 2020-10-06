@@ -9,7 +9,7 @@
 }
 .body-campaign{
     background: var(--dark);
-    visibility: hidden;
+    /* display: none; */
     z-index: 5;
     width: 100%;
     overflow-x: hidden;
