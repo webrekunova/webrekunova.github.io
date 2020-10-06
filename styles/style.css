@@ -811,6 +811,9 @@ footer .wr{
      .header-menu{
          display: none;
      }
+     #contacts{
+         overflow: initial;
+     }
      #burger-icon{
          display: block;
          width: 26px;
@@ -1037,7 +1040,10 @@ footer .wr{
 
     /* IPHONE 5*/
   @media screen and (max-width: 320px){
-
+    .tile {
+        flex-basis: 150px;
+        height: 158px;
+    } 
       .header-title {
         margin-top: 50px;
         font-size: 39px;
