@@ -441,6 +441,7 @@ arrow path{
 }
 .tile-link:hover{
     background-color: var(--hover);
+    cursor: url("../assets/img/cursor_pointer.svg"), pointer;
 }
 
 .wyevale{
@@ -560,6 +561,36 @@ arrow path{
 }
 #simple_logo{
     background: url("../assets/img/simple_logo.png") no-repeat;
+    background-size: 60%;
+    background-position: center ;
+}
+.mariott{
+    background: url("../assets/img/mariott.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+#mariott_logo{
+    background: url("../assets/img/mariott_logo.png") no-repeat;
+    background-size: 60%;
+    background-position: center ;
+}
+.oralb{
+    background: url("../assets/img/oralb.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+#oralb_logo{
+    background: url("../assets/img/oralb_logo.png") no-repeat;
+    background-size: 60%;
+    background-position: center ;
+}
+.ugg{
+    background: url("../assets/img/ugg.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+#ugg_logo{
+    background: url("../assets/img/ugg_logo.png") no-repeat;
     background-size: 60%;
     background-position: center ;
 }
