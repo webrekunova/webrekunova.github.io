@@ -36,7 +36,7 @@ function showCampaignPage(name) {
     sessionStorage.setItem('currentCampaign', name)
     console.log('settted')
     window.location.href = "projects/campaign.html"
-     
+
     // campaignPage.style.display = 'block';
 
     // const body = document.querySelector('.body-main');
@@ -44,3 +44,12 @@ function showCampaignPage(name) {
 }
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
