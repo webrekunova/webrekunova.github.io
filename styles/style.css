@@ -185,7 +185,6 @@ h2{
 .menu-item{
     margin-right: 35px;
     float: left;
-    display: inline;
 }
 .header-menu-link:hover{
     color: var(--hover);
