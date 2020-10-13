@@ -101,7 +101,7 @@ h2{
         background: var(--main);
     }
     50%{
-        background: #E4CEFF;
+        background: #deebff;
     }
     100%{
         background: var(--main);
@@ -611,7 +611,7 @@ arrow path{
     
 }
 .studies{
-    background: #E0C5EA;
+    background: #e1b2ff;;
 }
 .studies-wr{
     text-align: center;
@@ -625,12 +625,11 @@ arrow path{
 .miley{
     width: 300px;
     height: 150px;
-    background: #F7E1CD;
+    background: #f7e1cd;
     border: 4px solid #000000;
     box-sizing: border-box;
     box-shadow: 9px 8px 18px 1px rgba(56, 56, 56, 0.63);
     border-radius: 15px;
-
 }
 .ae-box{
     margin-left: 120px;
@@ -662,10 +661,130 @@ arrow path{
     color: var(--dark);
 }
 /*studies*/
+.chameleon-wr{
+    position: relative;
+    height: 70px;
+}
+#chameleon{
+    width: 225px;
+    position: absolute;
+    right: -255px;
+    animation-name: chameleon;
+    animation-timing-function:  linear;
+    animation-iteration-count: infinite;
+    
+}
+.leg1{
+    transform-origin: 85px 79px;
+    animation: legRotate 0.3s infinite;
+}
+.leg2{
+    transform-origin: 241px 80px;
+    animation: legRotate2 0.4s infinite;
+    transform: rotate(0deg);
+}
+@keyframes legRotate2{
+    0%{
+        transform: rotate(0deg)
+    }
+    50%{
+        transform: rotate(5deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+}
+@keyframes legRotate{
+    0%{
+        transform: rotate(0deg)
+    }
+    50%{
+        transform: rotate(17deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+}
+#chameleon:hover{
+    cursor: url('../assets/img/cursor_pointer.svg') pointer;
+    animation-play-state: paused;
+}
+#chameleon:hover .cls-7{
+    transition: 0.25s;
+    cx: 39px;
+    cy: 56px;
+}
+#chameleon:hover .leg1{
+    animation-play-state: paused;
+}
+#chameleon:hover .leg2{
+    animation-play-state: paused;
+}
+#chameleon:hover .cls-3{
+    
+    fill: #e1b2ff;
+    
+}
+#chameleon:hover .cls-6{
+    
+    fill: #e1b2ff;
+    
+}
+#chameleon:hover .cls-1{
+    
+    fill: #be72ef;
+    
+}
+#chameleon:hover .cls-2{
+    
+    fill: #be72ef;
+    
+}
+#chameleon:hover .cls-5{
+    
+    fill: #be72ef;
+    
+}
 
+.cls-1,
+.cls-2,
+.cls-5 {
+    fill: #48cc74;
+}
 
+.cls-1,
+.cls-2,
+.cls-4,
+.cls-6 {
+    stroke: #000;
+    stroke-width: 2px;
+    stroke-miterlimit: 10;
+}
 
+.cls-1 {
+    stroke-width: 2px;
+}
 
+.cls-3,
+.cls-6 {
+    fill: #6bff7b;
+}
+
+.cls-4 {
+    fill: none;
+}
+
+.cls-7 {
+    fill: #231f20;
+}
+@keyframes chameleon{
+    0%{
+        right: -225px;
+    }
+    100%{
+        right: 100%;
+    }
+}
 /*ABOUT US*/
 .about-wr{
     font-family: 'Avenir';
@@ -857,6 +976,7 @@ footer .wr{
          background-position: center;
          cursor: pointer;
          margin-top: 27px;
+         background: url('../assets/img/cheese-burger.png')
      }
      .header.icons-wr{
          margin: 25px 0px 0px 36px;
@@ -969,7 +1089,7 @@ footer .wr{
     }
     .tile{
         flex-basis: 150px;
-        height: 194px;
+        height: 150px;
     }
   }
 
@@ -1067,7 +1187,9 @@ footer .wr{
     .footer-menu{
         display: none;
     }
-    
+    .simple{
+        display: none;
+    }
 
     
 

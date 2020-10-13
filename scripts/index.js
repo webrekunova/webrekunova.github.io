@@ -53,3 +53,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+var w = window.innerWidth;
+console.log(w);
+
+function changeAnimationTime(width) {
+    let animTime = width / 80 +"s";
+    const chameleon = document.getElementById('chameleon');
+    console.log(chameleon);
+    console.log(animTime);
+    chameleon.style.animationDuration = animTime;
+    console.log(chameleon.style);
+}
+
+
+$(window).on('resize', function () {
+    if ($(this).width() !== w) {
+        w = $(this).width();
+        console.log(w);
+        changeAnimationTime(w);
+    }
+});
+changeAnimationTime(w);

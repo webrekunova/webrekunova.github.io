@@ -16,47 +16,107 @@
 }
 .web-description{
     font-family: 'Avenir';
-    text-align: ;
     color: var(--contrast);
     font-size: 32px;
+    text-align: center;
     line-height: 40px;
-    max-width: 700px;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 120px;
 }
 .web-projects{
     display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
 .web-project{
-    width: 480px;
-    height: 480px;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 360px;
+    /* height: auto; */
+    flex-grow: 1;
+    cursor: url("../assets/img/cursor_pointer.svg") pointer;
 }
-.web-link{
+.web-link-name{
     color: var(--contrast);
     font-family: 'Avenir';
     font-size: 40px;
     font-weight: 800;
     text-align: center;
     vertical-align: middle;
-    line-height: 100%;
-    width: 100%;
-    height: 100%;
-    /* opacity:0; */
+    line-height: 40px;
+    opacity:0;
     transition:0.5s;
 }
 .web-project:hover {
     background:var(--hover);
     cursor: url("../assets/img/cursor_pointer.svg") pointer;
 }
-.web-project:hover .web-link {
+.web-project:hover .web-link-name {
     transition:0.1s;
     opacity:1;
     cursor: url("../assets/img/cursor_pointer.svg") pointer;
 }
 .gmt{
     background: url("../assets/img/gmt.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .ballet{
     background: url("../assets/img/ballet.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .ukrspec{
     background: url("../assets/img/urkspec.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+@media screen and (max-width: 1280px){
+    .web-project{
+        height: 360px;
+    }
+}
+@media screen and (max-width: 1090px){
+    .web-project{
+        height: 280px;
+    }
+}
+@media screen and (max-width: 890px){
+    .web-projects{
+        flex-wrap: wrap;
+    }
+    .web-project{
+        height: 450px;
+        max-width: 450px;
+    }
+}
+
+ /* IPHONE X*/
+  @media screen and (max-width: 415px){
+    .web-project{
+        height: 250px;
+        max-width: 250px;
+        position: relative;
+    }
+    .web-link-name{
+        opacity:1;
+        z-index: 2;
+    }
+    .web-project::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #0000006b;
+        position: absolute;
+    }
+
+  }
+
+    /* IPHONE 5*/
+  @media screen and (max-width: 320px){
+
+  }
