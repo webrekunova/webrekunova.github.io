@@ -59,7 +59,7 @@ var w = window.innerWidth;
 console.log(w);
 
 function changeAnimationTime(width) {
-    let animTime = width / 80 +"s";
+    let animTime = width / 80 + "s";
     const chameleon = document.getElementById('chameleon');
     console.log(chameleon);
     console.log(animTime);
@@ -76,3 +76,14 @@ $(window).on('resize', function () {
     }
 });
 changeAnimationTime(w);
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const menu = document.getElementsByClassName('header-menu')[0]
+
+toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('opened')
+    toggleButton.classList.toggle('closeBtn')
+})
+console.log(toggleButton)
+console.log(menu)
