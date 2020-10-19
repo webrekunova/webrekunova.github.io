@@ -278,7 +278,7 @@ h2{
 .me {
     width: 294px;
     /* min-height: 250px; */
-    margin: 0px auto;
+    margin: 126px auto;
     position: relative;
     height: 325px;
 }
@@ -949,17 +949,24 @@ footer .wr{
          display: none;
 
      }
+     .overflow-fix{
+         overflow: hidden;
+         /* pointer-events: none; */
+         display: block;
+         height: 100vh!important;
+     }
      .opened{
          display: block;
          width:  100%;
-         position:  absolute;
+         position:  fixed;
          top: 71px;
          height: 100vh;
          left: 0;
          height: 100%;
          background: #fdadd9;
          z-index: 20;
-         padding-top: 20px
+         padding-top: 90px;
+         pointer-events: all;
      }
      .menu-item{
          float: none;
@@ -974,12 +981,16 @@ footer .wr{
          width: 26px;
          height: 25px;
          float: right;
-        background: url('../assets/img/cheese-burger.png') no-repeat;
+         background: url('../assets/img/cheese-burger.png') no-repeat;
          background-position: center;
          cursor: pointer;
          margin-top: 27px;
          background-size: contain;
 
+     }
+     .header-menu-link{
+        font-size: 40px;
+        line-height: 60px;
      }
     .closeBtn{
         background: url("../assets/img/close.png") no-repeat;

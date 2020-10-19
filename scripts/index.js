@@ -80,10 +80,27 @@ changeAnimationTime(w);
 
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const menu = document.getElementsByClassName('header-menu')[0]
-
+const bodyMain = document.getElementsByClassName('body-main')[0]
+const menuItems = document.getElementsByClassName('header-menu-link')
+console.log(menuItems);
 toggleButton.addEventListener('click', () => {
     menu.classList.toggle('opened')
     toggleButton.classList.toggle('closeBtn')
+    bodyMain.classList.toggle('overflow-fix')
+
 })
+// menuItems.forEach(function (elem) {
+//     elem.addEventListener("click", function () {
+//         console.log('clicked');
+//     });
+// });
+// menuItems[0].addEventListener('click', function () {
+//         // bodyMain.classList.remove('overflow-fix');
+//         // menu.classList.remove('opened');
+//         // toggleButton.classList.remove('closeBtn');
+//         console.log('clicked');
+// })
+
+
 console.log(toggleButton)
 console.log(menu)
