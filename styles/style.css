@@ -20,6 +20,14 @@ body{
     font-family: "Avenir" sans-serif;
     cursor: url("../assets/img/cursor.svg"), default;
 }
+.lock{
+    overflow: hidden;
+    /* display: block; */
+    /* pointer-events: none; */
+    position: fixed;
+    top:0;
+    height: 100vh;
+}
 .body-main{
     height: 100%;
     background: var(--main);
@@ -173,8 +181,16 @@ h2{
     border: 3px solid black;
     position: relative;
     z-index: 1005;
-    top: -155px;
+    top: -147px;
     left: -9px;
+}
+.eyelid-right{
+    left: -15px;
+    transform: rotate(-6deg);
+}
+.eyelid-left{
+    left: 0px;
+    transform: rotate(6deg);
 }
 
 @media screen and (max-width: 840px){
@@ -1047,16 +1063,13 @@ footer .wr{
          display: none;
 
      }
+    .header-line{
+        margin-bottom: 60px;
+        /* margin-left: -14px; */
+        /* margin-right: -14px; */
+    }
      .header-icons svg{
          fill: var(--dark)
-     }
-     .lock{
-         overflow: hidden;
-         /* display: block; */
-         /* pointer-events: none; */
-         position: fixed;
-         top:0;
-         height: 100vh;
      }
      .opened{
          display: block;
@@ -1252,6 +1265,17 @@ footer .wr{
     .chameleon-wr{
         margin-top: 70px;
     }
+    .header-text{
+        font-size: 20px;
+        line-height: 23px;
+        margin: 40px auto;
+    }
+    .header-title{
+        font-size: 30px;
+        line-height: 34px;
+        margin-top: 40px;
+        margin-bottom: -10px;
+    }
   }
 
   /* IPHONE X*/
@@ -1280,20 +1304,8 @@ footer .wr{
     .header .wr{
         padding-top: 7px;
     }
-    .header-text{
-        font-size: 20px;
-        line-height: 23px;
-        margin: 40px auto;
-    }
     .down{
         margin: 70px auto
-    }
-
-    .header-title{
-        font-size: 30px;
-        line-height: 34px;
-        margin-top: 40px;
-        margin-bottom: -10px;
     }
     .miley{
         width: 260px;
@@ -1373,8 +1385,11 @@ footer .wr{
         height: 158px;
     } 
       .header-title {
-        margin-top: 50px;
-        font-size: 39px;
+        margin-top: 31px;
+        font-size: 26px;
+      }
+      .header-line{
+          margin-bottom: 20px
       }
       .header-description{
           font-size: 20px;
@@ -1382,5 +1397,12 @@ footer .wr{
       }
       #calc-button{
           margin-bottom: 57px;
+      }
+      .header-text{
+          margin: 24px auto;
+          font-size: 17px;
+      }
+      .opened{
+            padding-top: 34px;
       }
   }

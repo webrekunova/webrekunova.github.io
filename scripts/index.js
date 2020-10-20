@@ -1,7 +1,19 @@
-window.onload = () => {
-    const loader = document.getElementsByClassName('loader')[0];
-    loader.style.display = "none";
+const timeStart = Date.now();
 
+window.onload = () => {
+    const loadingTime = Date.now() - timeStart
+    const loader = document.querySelector('.loader');
+    if(loadingTime > 2000){     // if loaded faster then 2s
+        loader.style.display = "none";
+        bodyMain.classList.remove('lock');
+    }
+    else{
+        setTimeout(() => {
+            loader.style.display = "none";
+            bodyMain.classList.remove('lock');
+        }, 2000);               
+    }
+    
 }
 
 var el1 = $('#white'), eyeBall1 = el1.find('div');
@@ -42,7 +54,6 @@ function showCampaignPage(name) {
     window.location.href = "projects/campaign.html"
 
     // campaignPage.style.display = 'block';
-
     // const body = document.querySelector('.body-main');
     // body.style.display = "none";
 }
