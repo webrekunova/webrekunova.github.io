@@ -21,11 +21,14 @@ body{
     cursor: url("../assets/img/cursor.svg"), default;
 }
 .body-main{
-    animation: colorChange 4s infinite;
     height: 100%;
+    background: var(--main);
     /* display: flex; */
     /* min-height: 100vh; */
     /* flex-direction: column; */
+}
+.color-animation{
+    animation: colorChange 4s infinite;
 }
 a{
     outline: none;
@@ -83,6 +86,106 @@ h2{
     color: var(--dark);
     text-transform: uppercase;
 }
+
+
+
+/*LOADER*/
+.loader{
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 1000;
+}
+#eyes-wrapper{
+    width: 411px;
+    height: 235px;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+}
+.pupil-inner{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    border: 12px solid #133F2B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pupil-outter{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #95792C;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: eyeMovemenet 2s infinite;
+}
+@keyframes eyeMovemenet{
+    0%{
+        right:-30px;
+    }
+    25%{
+        right: 80px;
+    }
+    50%{
+        right: 80px;
+    }
+    75%{
+        right:-30px;
+    }
+    100%{
+        right:-30px;
+    }
+
+}
+.eye-body{
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+}
+.eye-box{
+    width: 130px;
+    height: 130px;
+    position: relative;
+}
+.eyelid{
+    width: 142px;
+    height: 67px;
+    background: #F0C9AA;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 3px solid black;
+    position: relative;
+    z-index: 1005;
+    top: -155px;
+    left: -9px;
+}
+
+@media screen and (max-width: 840px){
+    #eyes-wrapper{
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+}
+/*LOADER*/
+
+
+
 /*HEADER*/
 .header .wr{
     padding-top: 20px;
@@ -133,7 +236,7 @@ h2{
     margin-right:0;
 }
 .menu-link{
-    color: var(--secondary);
+    color: var(--dark);
     /* margin: 9px 0 -15px 0; */
     display: block;
     font-size: 18px;
@@ -177,7 +280,7 @@ h2{
     fill: var(--hover);
 }
 .icon-link svg{
-    fill: var(--secondary);
+    fill: var(--dark);
 }
 .phone{
     width: 19px;
@@ -273,7 +376,7 @@ h2{
 .me {
     width: 294px;
     /* min-height: 250px; */
-    margin: 126px auto;
+    margin: 0px auto 10px;
     position: relative;
     height: 325px;
 }
@@ -944,9 +1047,15 @@ footer .wr{
          display: none;
 
      }
+     .header-icons svg{
+         fill: var(--dark)
+     }
      .lock{
          overflow: hidden;
          /* display: block; */
+         /* pointer-events: none; */
+         position: fixed;
+         top:0;
          height: 100vh;
      }
      .opened{
@@ -958,7 +1067,7 @@ footer .wr{
          height: 100vh;
          left: 0;
          height: 100%;
-         background: #fdadd9;
+         background: var(--main);
          z-index: 20;
          padding-top: 90px;
          pointer-events: all;
@@ -973,31 +1082,59 @@ footer .wr{
      }
      .toggle-button{
          display: block;
-         width: 26px;
-         height: 25px;
+         width: 27px;
+         height: 30px;
          float: right;
-         background: url('../assets/img/cheese-burger.png') no-repeat;
-         background-position: center;
          cursor: pointer;
-         margin-top: 27px;
-         background-size: contain;
-
+         /* border-radius: 5px; */
+         margin-top: 36px;
+         position: relative;
+         pointer-events: all;
      }
+     .burger-line{
+         width: 100%;
+         position: absolute;
+         height: 3px;
+         left:0;
+         background: var(--dark);
+         transition: all 0.3s ease;
+     }
+     .toggle-button::after, .toggle-button::before{
+         content: '';
+         position: absolute;
+         left:0;
+         width: 100%;
+         height: 3px;
+         /* border-radius: 5px; */
+         background: var(--dark);
+        transition: all 0.3s ease;
+     }
+    .toggle-button::before{
+        top: -8px;
+    }
+    .toggle-button::after{
+        top: 8px;
+    }
      .header-menu-link{
         font-size: 40px;
         line-height: 60px;
      }
-    .closeBtn{
-        background: url("../assets/img/close.png") no-repeat;
-        background-position: center;
-        background-size: contain;
+    .toggle-button.closeBtn .burger-line{
+        transform: scale(0)
      }
-     .header.icons-wr{
-         margin: 25px 0px 0px 36px;
-         float: left;
+    .toggle-button.closeBtn::before{
+        transform: rotate(-45deg);
+        top: 0px;
+        height: 3px;
      }
-     .header .icons-wr{
-         float: none;
+    .toggle-button.closeBtn::after{
+        transform: rotate(45deg);
+        top: 0px;
+        height: 3px;
+     }
+     .header-icons{
+         margin: 22px 29px 0px 0;
+         /* float: none; */
      }
      .toggle-button svg{
          fill: var(--secondary);
@@ -1131,6 +1268,10 @@ footer .wr{
     .wr{
         padding: 80px 30px;
       }
+    .opened{
+          top: 35px;
+          padding-top: 80px;
+      }
     .me{
         width: 170px;
         height: 190px;
@@ -1195,14 +1336,20 @@ footer .wr{
         opacity:1;
     }
     .header-line{
-        margin-bottom: 40px
+        margin-bottom: 60px;
+        margin-left: -14px;
+        margin-right: -14px;
     }
     .header-logo{
         height: 47px;
         width: 73px;
     }
-    .header .icons-wr{
+    .header-icons{
         margin-top: 13px;
+        margin-right: 22px;
+    }
+    .toggle-button{
+        margin-top: 26px;
     }
     .tile {
         flex-basis: 150px;

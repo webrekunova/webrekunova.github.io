@@ -1,4 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementsByClassName('loader')[0];
+    loader.style.display = "none";
 
+})
 
 var el1 = $('#white'), eyeBall1 = el1.find('div');
 el1.show();
@@ -81,6 +85,10 @@ toggleButton.addEventListener('click', () => {
     menu.classList.toggle('opened')
     toggleButton.classList.toggle('closeBtn')
     bodyMain.classList.toggle('lock')
+    bodyMain.classList.toggle('color-animation')
+    $(document).on('touchmove', function (e) {
+        e.preventDefault();
+    });
 
 })
 
@@ -88,5 +96,6 @@ for (el of menuItems) {
     el.addEventListener("click", () => {
         toggleButton.classList.remove('closeBtn');
         menu.classList.remove('opened')
+        bodyMain.classList.toggle('color-animation')
     });
 }
