@@ -67,7 +67,7 @@ h2{
 
 .container{
     /* flex: 1; */
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .wr{
     max-width: 1440px;
