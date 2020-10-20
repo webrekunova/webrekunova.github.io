@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
     const loader = document.getElementsByClassName('loader')[0];
     loader.style.display = "none";
 
-})
+}
 
 var el1 = $('#white'), eyeBall1 = el1.find('div');
 el1.show();
