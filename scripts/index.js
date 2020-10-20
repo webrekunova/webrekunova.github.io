@@ -47,7 +47,7 @@ function showCampaignPage(name) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
+        bodyMain.classList.remove('lock');
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -56,51 +56,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 var w = window.innerWidth;
-console.log(w);
 
 function changeAnimationTime(width) {
     let animTime = width / 80 + "s";
     const chameleon = document.getElementById('chameleon');
-    console.log(chameleon);
-    console.log(animTime);
     chameleon.style.animationDuration = animTime;
-    console.log(chameleon.style);
 }
 
 
 $(window).on('resize', function () {
     if ($(this).width() !== w) {
         w = $(this).width();
-        console.log(w);
         changeAnimationTime(w);
     }
 });
 changeAnimationTime(w);
 
-
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const menu = document.getElementsByClassName('header-menu')[0]
 const bodyMain = document.getElementsByClassName('body-main')[0]
 const menuItems = document.getElementsByClassName('header-menu-link')
-console.log(menuItems);
+
 toggleButton.addEventListener('click', () => {
     menu.classList.toggle('opened')
     toggleButton.classList.toggle('closeBtn')
-    bodyMain.classList.toggle('overflow-fix')
+    bodyMain.classList.toggle('lock')
 
 })
-// menuItems.forEach(function (elem) {
-//     elem.addEventListener("click", function () {
-//         console.log('clicked');
-//     });
-// });
-// menuItems[0].addEventListener('click', function () {
-//         // bodyMain.classList.remove('overflow-fix');
-//         // menu.classList.remove('opened');
-//         // toggleButton.classList.remove('closeBtn');
-//         console.log('clicked');
-// })
 
-
-console.log(toggleButton)
-console.log(menu)
+for (el of menuItems) {
+    el.addEventListener("click", () => {
+        toggleButton.classList.remove('closeBtn');
+        menu.classList.remove('opened')
+    });
+}

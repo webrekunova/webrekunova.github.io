@@ -2,16 +2,10 @@
 @import "reset.css";
 @import "avenir.css";
 @import "anonym.css";
-@import "calc.css";
-@import "checkbox.css";
-@import "slider.css";
-@import "select.css";
-@import "modal.css";
 @import "project.css"; 
 @import "web.css"; 
 
 :root {
-
     --dark: black;
     --hover: #E2007C;
     --main: #FFABD9;
@@ -28,9 +22,10 @@ body{
 }
 .body-main{
     animation: colorChange 4s infinite;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+    height: 100%;
+    /* display: flex; */
+    /* min-height: 100vh; */
+    /* flex-direction: column; */
 }
 a{
     outline: none;
@@ -71,8 +66,8 @@ h2{
 }
 
 .container{
-    flex: 1;
-    overflow: hidden;
+    /* flex: 1; */
+    /* overflow: hidden; */
 }
 .wr{
     max-width: 1440px;
@@ -949,16 +944,16 @@ footer .wr{
          display: none;
 
      }
-     .overflow-fix{
+     .lock{
          overflow: hidden;
-         /* pointer-events: none; */
-         display: block;
-         height: 100vh!important;
+         /* display: block; */
+         height: 100vh;
      }
      .opened{
          display: block;
          width:  100%;
          position:  fixed;
+         overflow:auto;
          top: 71px;
          height: 100vh;
          left: 0;
