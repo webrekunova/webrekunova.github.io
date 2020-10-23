@@ -29,46 +29,61 @@ function isTouchDevice() {
 if (isTouchDevice() === true) {
     // alert('Touch Device'); //your logic for touch device
 
+    window.onscroll = function () { myFunction() };
 
-    var initialPoint;
-    var finalPoint;
-    document.addEventListener('touchstart', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        initialPoint = event.changedTouches[0];
-    }, false);
-    document.addEventListener('touchend', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        finalPoint = event.changedTouches[0];
-        var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
-        var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-        if (xAbs > 20 || yAbs > 20) {
-            //             if (xAbs > yAbs) {
-            //                 if (finalPoint.pageX < initialPoint.pageX) {
-            //                     /*СВАЙП ВЛЕВО*/
-            // }
-            //                 else {
-            //                     /*СВАЙП ВПРАВО*/
-            // }
-            //             }
-            //  {
-            if (finalPoint.pageY < initialPoint.pageY) {
-                /*СВАЙП ВВЕРХ*/
-                eyeBall1.css({
-                    marginTop: 3 + 'px',
-                });
-                console.log(20);
-            }
-            else {
-                eyeBall1.css({
-                    marginTop: -2 + 'px',
-                });
-                console.log(20);
-            }
-            // }
+    function myFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            eyeBall1.css({
+                marginTop: 3 + 'px',
+                transition: 0.7 + "s",
+            });
+        } else {
+            eyeBall1.css({
+                marginTop: -2 + 'px',
+                transition: 0.2 + "s",
+            });
         }
-    }, false);
+    }
+
+    // var initialPoint;
+    // var finalPoint;
+    // document.addEventListener('touchstart', function (event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     initialPoint = event.changedTouches[0];
+    // }, false);
+    // document.addEventListener('touchend', function (event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     finalPoint = event.changedTouches[0];
+    //     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+    //     var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+    //     if (xAbs > 20 || yAbs > 20) {
+    //         //             if (xAbs > yAbs) {
+    //         //                 if (finalPoint.pageX < initialPoint.pageX) {
+    //         //                     /*СВАЙП ВЛЕВО*/
+    //         // }
+    //         //                 else {
+    //         //                     /*СВАЙП ВПРАВО*/
+    //         // }
+    //         //             }
+    //         //  {
+    //         if (finalPoint.pageY < initialPoint.pageY) {
+    //             /*СВАЙП ВВЕРХ*/
+    //             eyeBall1.css({
+    //                 marginTop: 3 + 'px',
+    //             });
+    //             console.log(20);
+    //         }
+    //         else {
+    //             eyeBall1.css({
+    //                 marginTop: -2 + 'px',
+    //             });
+    //             console.log(20);
+    //         }
+    //         // }
+    //     }
+    // }, false);
 }
 else {
     // alert('Not a Touch Device'); //your logic for non touch device
