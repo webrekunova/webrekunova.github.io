@@ -4,6 +4,7 @@
 @import "anonym.css";
 @import "project.css"; 
 @import "web.css"; 
+@import "after.css"; 
 
 :root {
     --dark: black;
@@ -103,6 +104,7 @@ h2{
     height: 100%;
     background: var(--dark);
     position: fixed;
+    /* display: none; */
     top: 0;
     left:0;
     right:0;
@@ -396,33 +398,10 @@ h2{
     position: relative;
     height: 325px;
 }
-arrow path{
-    stroke-dasharray: 456;
-    stroke-dashoffset: 456;
-    animation: arrow 2s forwards;
-    animation-delay: 1.5s;
-}
-.arrow g{
-    fill-opacity:0;
-    animation: fill-in 2s forwards;
-    animation-delay: 1.5s;
-    fill: #000000
-}
-@keyframes arrow{
-    to{
-        stroke-dasharray: 0;
-        stroke-dashoffset: 0;
-    }
-}
-@keyframes fill-in{
-    to{
-        fill-opacity:1;
-    }
-}
 .head-text {
     position:  absolute;
     top: 50px;
-    left: 400px;
+    right: -300px;
     max-width: 230px;
     width: 100%;
     font-family: "Avenir";
@@ -430,50 +409,15 @@ arrow path{
     font-weight: 800;
     line-height: 38px;
 }
-.type1{
-    animation: type 0.5s steps(12, end);
-    width: 12ch;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.type2{
-    top: 100px;
-    animation: type2 0.5s steps(8, end);
-    animation-delay: 0.6s;
-    opacity:0;
-    width: 5ch;
-    overflow: hidden;
-    white-space: nowrap;
-    animation-fill-mode: forwards;
-}
-@keyframes type{
-    from{
-        width: 0ch;
-    }
-}
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  from {
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 .arrow {
     position: absolute;
-    left: 408px;
+    right: -258px;
     top: 115px;
     width: 146px;
+}
+.arrow g{
+    fill: black;
 }
 #white {
     width: 53%;
@@ -1227,18 +1171,24 @@ footer .wr{
   }
   @media screen and (max-width: 960px){
     .head-text{
-        line-height: 17px;
-        font-size: 12px;
-        left: 186px;
-    }
+
+right: -256px;
+
+line-height: 24px;
+
+font-size: 20px;
+}
     .type2{
         top: 68px;
     }
     .arrow{
-        left: 199px;
-        width: 43px;
-        top: 80px;
-    }
+
+right: -136px;
+
+width: 100px;
+
+top: 85px;
+}
   }
   @media screen and (max-width: 620px){
     .detail-value{
@@ -1277,18 +1227,31 @@ footer .wr{
         margin-bottom: -10px;
     }
   }
+  @media screen and (max-width: 570px){
+      .arrow{
+        width: 60px;
+        right: -96px;
+        top: 75px;
+    }
+      .head-text{   
+        font-size: 14px;         
+        line-height: 19px;
+      }
+  }
 
   /* IPHONE X*/
   @media screen and (max-width: 415px){
-    /* .header-line{
-        position: fixed;
-        background: #ffabd9bf;
-        z-index: 5;
-        width: 100%;
-        margin-left: -30px;
-        margin-top: -19px;
-        padding: 10px 25px;
-    } */
+      .arrow{
+        width: 48px;
+        right: -53px;
+        top: 38px;
+    }
+      .head-text{
+        font-size: 14px;
+        line-height: 19px;
+        right: -159px;
+        top: 10px;
+      }
     .wr{
         padding: 80px 30px;
       }

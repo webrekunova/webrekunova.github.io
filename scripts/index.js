@@ -1,17 +1,29 @@
 const timeStart = Date.now();
-
+let firstTime = true;
 window.onload = () => {
+
     const loadingTime = Date.now() - timeStart
     const loader = document.querySelector('.loader');
-    if (loadingTime > 2500) {     // if loaded faster then 2s
-        loader.style.display = "none";
-        bodyMain.classList.remove('lock');
-    }
-    else {
-        setTimeout(() => {
+
+
+    if (firstTime) {
+        if (loadingTime > 2500) {     // if loaded faster then 2s
             loader.style.display = "none";
             bodyMain.classList.remove('lock');
-        }, 2500);
+            sessionStorage.setItem(firstTime, false);
+        }
+        else {
+            setTimeout(() => {
+                loader.style.display = "none";
+                bodyMain.classList.remove('lock');
+                sessionStorage.setItem(firstTime, false);
+            }, 2500);
+
+        }
+    }
+    else {
+        loader.style.display = "none";
+        bodyMain.classList.remove('lock');
     }
 
 }
@@ -34,7 +46,7 @@ if (isTouchDevice() === true) {
     function myFunction() {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
             eyeBall1.css({
-                marginTop: 3 + 'px',
+                marginTop: 5 + 'px',
                 transition: 0.7 + "s",
             });
         } else {
@@ -101,22 +113,6 @@ else {
         }
     });
 }
-
-// $('html').mousemove(function (e) {
-//     if (!isEyeProcessed) {
-//         isEyeProcessed = true;
-//         var x2 = e.pageX, y2 = e.pageY;
-//         y = ((r * (y2 - y1)) / Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))) + y1;
-//         x = (((y - y1) * (x2 - x1)) / (y2 - y1)) + x1;
-//         eyeBall1.css({
-//             marginTop: (y - y1 + 1) + 'px',
-//             marginLeft: (x - x1) + 'px'
-//         });
-//         isEyeProcessed = false;
-//     }
-// });
-
-
 
 
 
