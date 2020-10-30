@@ -14,12 +14,12 @@
     width: 100%;
     overflow-y: hidden;
 }
-#demo-reel{
-    max-width: 620px;
-    width: 52%;
+.demo-reel{
+    /* max-width: 620px; */
+    width: 90%;
     position: absolute;
     left: 38%;
-    top: 63%;
+    top: 60%;
     transform: translate(-50%, -50%);
     /* border-radius: 100px; */
     background-size: cover;
@@ -36,5 +36,5 @@
     transform: translate(-50%, -50%);
 }
 .tv{
-    width: 100%;
+    /* width: 100%; */
 }
