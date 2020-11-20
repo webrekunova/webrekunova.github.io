@@ -44,10 +44,10 @@ a{
     display: block;
 }
 body:hover{
-    cursor: url("../assets/img/cursor.svg"), default;
+    cursor: url("../assets/img/cursor_pointer.svg"), default;
 }
 a:hover{
-    cursor: url("../assets/img/cursor_pointer.svg"), pointer;
+    cursor: url("../assets/img/cursor_hand.svg"), pointer;
 }
 h2{
     font-family: 'Avenir';
@@ -66,10 +66,12 @@ h2{
     width: 208px;
     border: none;
     outline: none;
-    cursor: url("../assets/img/cursor_pointer.svg"), pointer;
+    cursor: url("../assets/img/cursor_hand.svg"), pointer;
     font-weight: 800;
     text-align: center;
 }
+
+
 .button-link{
     font-family: "Avenir";
     font-size: 24px;
@@ -473,7 +475,7 @@ h2{
 }
 .tile-link:hover{
     background-color: var(--hover);
-    cursor: url("../assets/img/cursor_pointer.svg"), pointer;
+    cursor: url("../assets/img/cursor_hand.svg"), pointer;
 }
 
 .wyevale{

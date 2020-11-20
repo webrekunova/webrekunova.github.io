@@ -13,13 +13,14 @@
     z-index: 5;
     width: 100%;
     overflow-y: hidden;
+    cursor: url("../assets/img/finger.png"), default !important;
 }
 .demo-reel{
     /* max-width: 620px; */
-    width: 90%;
+    width: 57%;
     position: absolute;
-    left: 38%;
-    top: 60%;
+    left: 37%;
+    top: 61%;
     transform: translate(-50%, -50%);
     /* border-radius: 100px; */
     background-size: cover;
@@ -37,4 +38,27 @@
 }
 .tv{
     /* width: 100%; */
+}
+#pointer_tv{
+    width: 290px;
+    position: absolute;
+    pointer-events: none;
+}
+.controls{
+  width: 57%;
+  height: 37%;
+    position: absolute;
+    left: 37%;
+    top: 61%;
+    transform: translate(-50%, -50%);
+    opacity:0
+}
+#play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+.playing{
+    opacity:0
 }

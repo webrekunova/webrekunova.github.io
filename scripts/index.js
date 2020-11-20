@@ -6,13 +6,13 @@ window.onload = () => {
     const loader = document.querySelector('.loader');
 
 
-    if (firstTime) {
+    if (firstTime && loader) {
         if (loadingTime > 2500) {     // if loaded faster then 2s
             loader.style.display = "none";
             bodyMain.classList.remove('lock');
             sessionStorage.setItem(firstTime, false);
         }
-        else {
+        else { 
             setTimeout(() => {
                 loader.style.display = "none";
                 bodyMain.classList.remove('lock');
@@ -56,46 +56,6 @@ if (isTouchDevice() === true) {
             });
         }
     }
-
-    // var initialPoint;
-    // var finalPoint;
-    // document.addEventListener('touchstart', function (event) {
-    //     event.preventDefault();
-    //     event.stopPropagation();
-    //     initialPoint = event.changedTouches[0];
-    // }, false);
-    // document.addEventListener('touchend', function (event) {
-    //     event.preventDefault();
-    //     event.stopPropagation();
-    //     finalPoint = event.changedTouches[0];
-    //     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
-    //     var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-    //     if (xAbs > 20 || yAbs > 20) {
-    //         //             if (xAbs > yAbs) {
-    //         //                 if (finalPoint.pageX < initialPoint.pageX) {
-    //         //                     /*СВАЙП ВЛЕВО*/
-    //         // }
-    //         //                 else {
-    //         //                     /*СВАЙП ВПРАВО*/
-    //         // }
-    //         //             }
-    //         //  {
-    //         if (finalPoint.pageY < initialPoint.pageY) {
-    //             /*СВАЙП ВВЕРХ*/
-    //             eyeBall1.css({
-    //                 marginTop: 3 + 'px',
-    //             });
-    //             console.log(20);
-    //         }
-    //         else {
-    //             eyeBall1.css({
-    //                 marginTop: -2 + 'px',
-    //             });
-    //             console.log(20);
-    //         }
-    //         // }
-    //     }
-    // }, false);
 }
 else {
     // alert('Not a Touch Device'); //your logic for non touch device
@@ -192,3 +152,4 @@ for (el of menuItems) {
         bodyMain.classList.toggle('color-animation')
     });
 }
+
