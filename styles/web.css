@@ -30,12 +30,13 @@
     /* flex-wrap: wrap; */
 }
 .web-project{
-    width: 100%;
+    max-width: 460px;
     height: 460px;
+    /* height: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 360px;
+    flex-basis: 360;
     /* height: auto; */
     flex-grow: 1;
     cursor: url("../assets/img/cursor_pointer.svg") pointer;

@@ -6,17 +6,7 @@ const container = document.querySelector('.body-after');
 const remoteHeight = pointer.getBoundingClientRect().height
 const saveBottomArea = windowHeight - remoteHeight;
 
-window.addEventListener('mousemove', function (ev) {
-    const X = ev.pageX;
-    let Y
-    if (ev.pageY > saveBottomArea) {
-        Y = saveBottomArea
-    }
-    else {
-        Y = ev.pageY
-    }
-    movePointerTV(X, Y)
-});
+
 
 
 function movePointerTV(x, y) {
@@ -39,6 +29,31 @@ playerControls.addEventListener("click", () => playVideo());
 
 function playVideo() {
     document.getElementsByClassName('demo-reel')[0].play();
-    playerControls.style.opacity="0"
+    playerControls.style.display = "none"
 }
 
+
+function isTouchDevice() {
+    return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+}
+
+if (isTouchDevice() === true) {
+    // alert('Touch Device'); //your logic for touch device
+    pointer.style.display = "none!"
+
+
+}
+else {
+    pointer.style.display = "block"
+    window.addEventListener('mousemove', function (ev) {
+        const X = ev.pageX;
+        let Y
+        if (ev.pageY > saveBottomArea) {
+            Y = saveBottomArea
+        }
+        else {
+            Y = ev.pageY
+        }
+        movePointerTV(X, Y)
+    });
+}
