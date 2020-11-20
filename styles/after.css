@@ -51,7 +51,7 @@
   left: 37%;
   top: 61%;
   transform: translate(-50%, -50%);
-  opacity:0;
+  /* opacity:0; */
   z-index: -1;
   overflow:  hidden;
 }

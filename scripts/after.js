@@ -1,7 +1,7 @@
 const pointer = document.getElementById('pointer_tv')
 const playerControls = document.querySelector('.controls')
-const playButton = document.getElementsById('play')
-const video = document.querySelector('.tv-wr')
+const playButton = document.getElementById('play')
+const videoWrapper = document.querySelector('.tv-wr')
 const windowHeight = window.innerHeight
 const container = document.querySelector('.body-after');
 const remoteHeight = pointer.getBoundingClientRect().height
@@ -25,22 +25,22 @@ function movePointerTV(x, y) {
     pointer.style.top = (y - 30) + 'px';
 
 }
-video.addEventListener('mouseover', function (ev) {
-    playerControls.style.opacity = 1
+videoWrapper.addEventListener('mouseover', function (ev) {
+    playButton.style.opacity = 1
 })
-video.addEventListener('mouseout', function (ev) {
-    playerControls.style.opacity = 0
+videoWrapper.addEventListener('mouseout', function (ev) {
+    playButton.style.opacity = 0
 })
 
 // let videoElem = document.getElementById("video");
 // let playButton = document.getElementById("playbutton");
 
-playerControls.addEventListener("click", () => playVideo());
+videoWrapper.addEventListener("click", () => playVideo());
 
 
 function playVideo() {
     document.getElementsByClassName('demo-reel')[0].play();
-    playerControls.style.display = "none"
+    playButton.style.display = "none"
 }
 
 
