@@ -8,6 +8,7 @@ const windowHeight = window.innerHeight
 const container = document.querySelector('.body-after');
 const remoteHeight = pointer.getBoundingClientRect().height
 const saveBottomArea = windowHeight - remoteHeight;
+const videoLoader = document.getElementById('video-preloader');
 
 window.addEventListener('mousemove', function (ev) {
     const X = ev.pageX;
@@ -22,11 +23,7 @@ window.addEventListener('mousemove', function (ev) {
 });
 
 
-function movePointerTV(x, y) {
-    pointer.style.left = (x - 110) + 'px';
-    pointer.style.top = (y - 30) + 'px';
 
-}
 videoWrapper.addEventListener('mouseover', function (ev) {
     playButton.style.opacity = 1
 })
@@ -34,6 +31,14 @@ videoWrapper.addEventListener('mouseout', function (ev) {
 
     playButton.style.opacity = 0;
 })
+
+
+function movePointerTV(x, y) {
+    pointer.style.left = (x - 110) + 'px';
+    pointer.style.top = (y - 30) + 'px';
+
+}
+
 
 // let videoElem = document.getElementById("video");
 // let playButton = document.getElementById("playbutton");
@@ -54,6 +59,17 @@ function toggleVideo() {
 video.addEventListener('ended', (event) => {
     playButton.style.display = "block";
     console.log('ended');
+
+
+})
+
+video.addEventListener('canplay', (event) => {
+    videoLoader.style.display = "none";
+    console.log('ready');
+})
+video.addEventListener('loadstart', (event) => {
+    videoLoader.style.display = "block";
+    console.log('loading');
 })
 
 
