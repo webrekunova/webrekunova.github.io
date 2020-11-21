@@ -20,6 +20,9 @@ function renderCampaign(campaign) {
     description.innerText = campaign.description;
     // url.setAttribute('href', campaign.url);
     videoUrl.setAttribute('src', campaign.videoUrl);
+    
+    const video = document.querySelector('.campaign-video')
+    video.play();
 
     pcLink.addEventListener('click', () => {
         window.open(campaign.url);

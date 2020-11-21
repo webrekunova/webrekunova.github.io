@@ -1,24 +1,26 @@
+
+
+/*LOADER*/
+
 const timeStart = Date.now();
-let firstTime = true;
+let hasPlayed = sessionStorage.getItem('hasPlayed');
 window.onload = () => {
 
     const loadingTime = Date.now() - timeStart
     const loader = document.querySelector('.loader');
 
-
-    if (firstTime && loader) {
+    if (hasPlayed === null) {
         if (loadingTime > 2500) {     // if loaded faster then 2s
             loader.style.display = "none";
             bodyMain.classList.remove('lock');
-            sessionStorage.setItem(firstTime, false);
+            sessionStorage.setItem('hasPlayed', true);
         }
         else {
             setTimeout(() => {
                 loader.style.display = "none";
                 bodyMain.classList.remove('lock');
-                sessionStorage.setItem(firstTime, false);
+                sessionStorage.setItem('hasPlayed', true);
             }, 2500);
-
         }
     }
     else {
@@ -27,6 +29,10 @@ window.onload = () => {
     }
 
 }
+
+
+/*EYES MOVING*/
+
 
 var el1 = $('#white'), eyeBall1 = el1.find('div');
 el1.show();
@@ -74,19 +80,7 @@ else {
     });
 }
 
-$.fn.shuffle = function () {
-    var m = this.length, t, i;
-    while (m) {
-        i = Math.floor(Math.random() * m--);
-        t = this[m];
-        this[m] = this[i];
-        this[i] = t;
-    }
-    return this;
-};
-$('.projects-tile').shuffle().each(function (n) {
-    $(this).delay(n * 900).fadeTo(1500, 1);
-});
+/*CLICK THROUGHT A CAMPAIGN*/
 
 function handleProjectClick() {
     const campaignLinks = document.querySelectorAll('.tile-link');
@@ -113,6 +107,8 @@ function showCampaignPage(name) {
 }
 
 
+/*SMOOTH ANCHOR LINKS*/
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -123,6 +119,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+
+/*CHAMELEON ANIMAITON*/
 
 var w = window.innerWidth;
 
@@ -141,6 +140,8 @@ $(window).on('resize', function () {
 });
 changeAnimationTime(w);
 
+
+/*MOBILE MENU*/
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const menu = document.getElementsByClassName('header-menu')[0]
 const bodyMain = document.getElementsByClassName('body-main')[0]
@@ -165,3 +166,30 @@ for (el of menuItems) {
     });
 }
 
+/*CAMPAIGNS ANIMATION*/
+const tile = document.getElementsByClassName('tile')
+function showCampaigns() {
+    let durance = 0.5;
+    for (let i = 0; i < tile.length; i++) {
+        durance += 0.15;
+
+        tile[i].style.opacity = 1;
+        tile[i].style.transition = `opacity ${0.6} s`;
+        // tile[i].style.transitionDelay = getRandomArbitrary(0.5, 2) + 's';
+        tile[i].style.transitionDelay = durance + 's';
+
+    }
+
+}
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+const projectsWrapper = document.querySelector('.header');
+const projectsWrapperTopCoordinate = projectsWrapper.getBoundingClientRect().height
+window.addEventListener('scroll', function () {
+   console.log(pageYOffset, projectsWrapperTopCoordinate) 
+//    pageYOffset > projectsWrapperTopCoordinate && showCampaigns()
+    pageYOffset > 200 && showCampaigns()
+
+});
