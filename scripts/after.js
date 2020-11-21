@@ -24,13 +24,7 @@ window.addEventListener('mousemove', function (ev) {
 
 
 
-videoWrapper.addEventListener('mouseover', function (ev) {
-    playButton.style.opacity = 1
-})
-videoWrapper.addEventListener('mouseout', function (ev) {
 
-    playButton.style.opacity = 0;
-})
 
 
 function movePointerTV(x, y) {
@@ -43,7 +37,16 @@ function movePointerTV(x, y) {
 // let videoElem = document.getElementById("video");
 // let playButton = document.getElementById("playbutton");
 
-videoWrapper.addEventListener("click", () => toggleVideo());
+
+video.addEventListener('canplaythrough', (event) => {
+    console.log('ready');
+    videoLoader.style.display = "none";
+    playButton.style.opacity = 1
+    videoWrapper.addEventListener("click", () => toggleVideo());
+})
+
+
+
 
 
 function toggleVideo() {
@@ -60,18 +63,21 @@ video.addEventListener('ended', (event) => {
     playButton.style.display = "block";
     console.log('ended');
 
+    videoWrapper.addEventListener('mouseover', function (ev) {
+        playButton.style.opacity = 1
+    })
+    videoWrapper.addEventListener('mouseout', function (ev) {
+
+        playButton.style.opacity = 0;
+    })
 
 })
 
-video.addEventListener('canplay', (event) => {
-    videoLoader.style.display = "none";
-    console.log('ready');
-})
-video.addEventListener('loadstart', (event) => {
+
+function showLoader() {
     videoLoader.style.display = "block";
-    console.log('loading');
-})
 
+}
 
 function playVideo() {
     video.play();

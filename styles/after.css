@@ -58,12 +58,12 @@
   z-index: -1;
   overflow:  hidden;
 }
-.controls_button{
+.controls-button{
     position: absolute;
     left: 53%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* width: 100%; */
+    width: 26%;
 }
 .playing{
     opacity:0;
@@ -83,7 +83,7 @@
     top: 50%;
     left: 53%;
     transform: translate(-50%, -50%);
-    display: none;
+    /* display: none; */
 }
 #video-preloader:after {
   content: '.';
@@ -118,5 +118,13 @@
 @media screen and (max-width:700px){
     #video-preloader{
         font-size: 34px;
+    }
+    .controls-button{
+
+    }
+} 
+ @media screen and (max-width: 415px){
+  #video-preloader{
+        font-size: 22px;
     }
 }
