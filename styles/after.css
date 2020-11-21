@@ -7,7 +7,7 @@
     --secondary: #3A3A3A;
     --selected: #8b8b8b;
 }
-.container{
+.body-after .container{
     height: 100vh;
 }
 .body-after{
