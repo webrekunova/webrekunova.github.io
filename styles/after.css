@@ -7,6 +7,9 @@
     --secondary: #3A3A3A;
     --selected: #8b8b8b;
 }
+.container{
+    height: 100vh;
+}
 .body-after{
     background: var(--dark);
     /* display: none; */
@@ -55,13 +58,16 @@
   z-index: -1;
   overflow:  hidden;
 }
-#play{
+.controls_button{
     position: absolute;
     left: 53%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    /* width: 100%; */
 }
 .playing{
-    opacity:0
+    opacity:0;
+}
+#pause{
+    opacity:0;
 }

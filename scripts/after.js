@@ -1,7 +1,9 @@
 const pointer = document.getElementById('pointer_tv')
 const playerControls = document.querySelector('.controls')
 const playButton = document.getElementById('play')
+const pauseButton = document.getElementById('pause')
 const videoWrapper = document.querySelector('.tv-wr')
+const video = document.querySelector('.demo-reel')
 const windowHeight = window.innerHeight
 const container = document.querySelector('.body-after');
 const remoteHeight = pointer.getBoundingClientRect().height
@@ -29,18 +31,41 @@ videoWrapper.addEventListener('mouseover', function (ev) {
     playButton.style.opacity = 1
 })
 videoWrapper.addEventListener('mouseout', function (ev) {
-    playButton.style.opacity = 0
+
+    playButton.style.opacity = 0;
 })
 
 // let videoElem = document.getElementById("video");
 // let playButton = document.getElementById("playbutton");
 
-videoWrapper.addEventListener("click", () => playVideo());
+videoWrapper.addEventListener("click", () => toggleVideo());
+
+
+function toggleVideo() {
+    if (video.playing) {
+        pauseVideo();
+        console.log('paused')
+    }
+    else {
+        playVideo();
+        console.log('plays')
+    }
+}
+video.addEventListener('ended', (event) => {
+    playButton.style.display = "block";
+    console.log('ended');
+})
 
 
 function playVideo() {
-    document.getElementsByClassName('demo-reel')[0].play();
+    video.play();
     playButton.style.display = "none"
+    pauseButton.style.opacity = 0;
+}
+function pauseVideo() {
+    video.pause();
+    pauseButton.style.display = "block"
+    pauseButton.style.opacity = 1;
 }
 
 
@@ -53,10 +78,19 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 
 if (!isMobile) {
     pointer.style.display = "block";
-    
+
 }
 else {
 
     pointer.style.display = "none";
     playButton.style.opacity = 1
 }
+
+
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+    get: function () {
+        return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+    }
+})
+
+
