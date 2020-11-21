@@ -53,10 +53,10 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 
 if (!isMobile) {
     pointer.style.display = "block";
-
+    
 }
 else {
 
     pointer.style.display = "none";
-
+    playButton.style.opacity = 1
 }

@@ -12,7 +12,7 @@ window.onload = () => {
             bodyMain.classList.remove('lock');
             sessionStorage.setItem(firstTime, false);
         }
-        else { 
+        else {
             setTimeout(() => {
                 loader.style.display = "none";
                 bodyMain.classList.remove('lock');
@@ -74,7 +74,19 @@ else {
     });
 }
 
-
+$.fn.shuffle = function () {
+    var m = this.length, t, i;
+    while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = this[m];
+        this[m] = this[i];
+        this[i] = t;
+    }
+    return this;
+};
+$('.projects-tile').shuffle().each(function (n) {
+    $(this).delay(n * 900).fadeTo(1500, 1);
+});
 
 function handleProjectClick() {
     const campaignLinks = document.querySelectorAll('.tile-link');
