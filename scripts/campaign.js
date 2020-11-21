@@ -11,16 +11,29 @@ function renderCampaign(campaign) {
     const services = document.querySelector('.services-value');
     const description = document.querySelector('.campaign-description');
     const url = document.querySelector('.campaign-button-link');
-    const videoUrl = document.querySelector('.campaign-video-src');
+//    const videoUrl = document.querySelector('.campaign-video-src');
     const pcLink = document.querySelector('.campaign-preview-link');
 
     name.innerText = campaign.name;
     format.innerText = campaign.format;
     services.innerText = campaign.services;
     description.innerText = campaign.description;
+  //  videoUrl.setAttribute('src', campaign.videoUrl);
     // url.setAttribute('href', campaign.url);
-    videoUrl.setAttribute('src', campaign.videoUrl);
     
+    const videoNode = document.createElement('video');
+    videoNode.setAttribute('autoplay', 'autoplay');
+    videoNode.setAttribute('loop', true);
+    videoNode.setAttribute('muted', 'muted');
+    videoNode.setAttribute('playsinline', true);
+    
+    videoNode.classList = "campaign-video"
+    videoNode.src= campaign.videoUrl
+    const container = document.querySelector('.campaign-preview')
+    container.appendChild(videoNode)
+        // < video autoplay loop muted = "muted" playsinline class="campaign-video" >
+        //     <source class="campaign-video-src" src="">
+        // </>
     const video = document.querySelector('.campaign-video')
     video.play();
 

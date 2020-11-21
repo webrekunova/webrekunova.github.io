@@ -188,7 +188,7 @@ function getRandomArbitrary(min, max) {
 const projectsWrapper = document.querySelector('.header');
 const projectsWrapperTopCoordinate = projectsWrapper.getBoundingClientRect().height
 window.addEventListener('scroll', function () {
-   console.log(pageYOffset, projectsWrapperTopCoordinate) 
+  // console.log(pageYOffset, projectsWrapperTopCoordinate) 
 //    pageYOffset > projectsWrapperTopCoordinate && showCampaigns()
     pageYOffset > 200 && showCampaigns()
 
