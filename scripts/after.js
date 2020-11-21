@@ -32,23 +32,18 @@ function movePointerTV(x, y) {
     pointer.style.top = (y - 30) + 'px';
 
 }
-
-
-video.addEventListener("progress", function () {
-    // When buffer is 1 whole video is buffered
-    if (Math.round(video.buffered.end(0)) / Math.round(video.seekable.end(0)) === 1) {
-        // Entire video is downloaded
-
-    }
-}, false);
-
-video.addEventListener('canplaythrough', (event) => {
-    console.log('ready');
-    videoLoader.style.display = "none";
+videoWrapper.addEventListener('mouseover', function (ev) {
     playButton.style.opacity = 1
-    videoWrapper.addEventListener("click", () => toggleVideo());
+})
+videoWrapper.addEventListener('mouseout', function (ev) {
+
+    playButton.style.opacity = 0;
 })
 
+
+videoLoader.style.display = "none";
+// playButton.style.opacity = 1
+videoWrapper.addEventListener("click", () => toggleVideo());
 
 
 
@@ -66,14 +61,6 @@ function toggleVideo() {
 video.addEventListener('ended', (event) => {
     playButton.style.display = "block";
     console.log('ended');
-
-    videoWrapper.addEventListener('mouseover', function (ev) {
-        playButton.style.opacity = 1
-    })
-    videoWrapper.addEventListener('mouseout', function (ev) {
-
-        playButton.style.opacity = 0;
-    })
 
 })
 
@@ -105,10 +92,18 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 if (!isMobile) {
     pointer.style.display = "block";
 
+    // video.addEventListener('canplay', (event) => {
+    //     //     alert('ready');
+    //     videoLoader.style.display = "none";
+    //     playButton.style.opacity = 1
+    //     videoWrapper.addEventListener("click", () => toggleVideo());
+    // })
+
 }
 else {
-
+    
     pointer.style.display = "none";
+
     // playButton.style.opacity = 1
 }
 
