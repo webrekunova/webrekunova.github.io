@@ -34,9 +34,13 @@ function movePointerTV(x, y) {
 }
 
 
-// let videoElem = document.getElementById("video");
-// let playButton = document.getElementById("playbutton");
+video.addEventListener("progress", function () {
+    // When buffer is 1 whole video is buffered
+    if (Math.round(video.buffered.end(0)) / Math.round(video.seekable.end(0)) === 1) {
+        // Entire video is downloaded
 
+    }
+}, false);
 
 video.addEventListener('canplaythrough', (event) => {
     console.log('ready');
@@ -105,7 +109,7 @@ if (!isMobile) {
 else {
 
     pointer.style.display = "none";
-    playButton.style.opacity = 1
+    // playButton.style.opacity = 1
 }
 
 
