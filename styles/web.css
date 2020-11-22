@@ -102,6 +102,16 @@
 
  /* IPHONE X*/
   @media screen and (max-width: 415px){
+      .web-description {
+        font-family: 'Avenir';
+        color: var(--contrast);
+        font-size: 20px;
+        text-align: center;
+        line-height: 26px;
+        max-width: 750px;
+        margin: 0 auto;
+        margin-bottom: 58px;
+    }
     .web-project{
         height: 250px;
         max-width: 250px;
@@ -140,14 +150,5 @@
 
     /* IPHONE 5*/
   @media screen and (max-width: 320px){
-    .web-description{
-        font-family: 'Avenir';
-        color: var(--contrast);
-        font-size: 22px;
-        text-align: center;
-        line-height: 28px;
-        max-width: 750px;
-        margin: 0 auto;
-        margin-bottom: 120px;
-    }
+
   }

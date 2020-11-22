@@ -103,8 +103,7 @@ if (!isMobile) {
 else {
     
     pointer.style.display = "none";
-
-    // playButton.style.opacity = 1
+    playButton.style.opacity = 1;
 }
 
 
