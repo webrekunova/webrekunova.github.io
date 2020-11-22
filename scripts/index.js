@@ -174,9 +174,9 @@ function showCampaigns() {
         durance += 0.15;
 
         tile[i].style.opacity = 1;
-        tile[i].style.transition = `opacity ${0.6} s`;
-        // tile[i].style.transitionDelay = getRandomArbitrary(0.5, 2) + 's';
-        tile[i].style.transitionDelay = durance + 's';
+        tile[i].style.transition = "opacity " + getRandomArbitrary(0.8, 1)+"s";
+        tile[i].style.transitionDelay = getRandomArbitrary(0.2, 1.1) + 's';
+        // tile[i].style.transitionDelay = durance + 's';
 
     }
 
@@ -186,10 +186,10 @@ function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
 const projectsWrapper = document.querySelector('.header');
-const projectsWrapperTopCoordinate = projectsWrapper.getBoundingClientRect().height
+const projectsWrapperTopCoordinate = projectsWrapper.getBoundingClientRect().height/4
 window.addEventListener('scroll', function () {
   // console.log(pageYOffset, projectsWrapperTopCoordinate) 
 //    pageYOffset > projectsWrapperTopCoordinate && showCampaigns()
-    pageYOffset > 200 && showCampaigns()
+    pageYOffset > projectsWrapperTopCoordinate && showCampaigns()
 
 });

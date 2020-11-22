@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 360;
+    flex-basis: 360px;
     /* height: auto; */
     flex-grow: 1;
     cursor: url("../assets/img/cursor_pointer.svg") pointer;
@@ -119,5 +119,14 @@
 
     /* IPHONE 5*/
   @media screen and (max-width: 320px){
-
+    .web-description{
+        font-family: 'Avenir';
+        color: var(--contrast);
+        font-size: 22px;
+        text-align: center;
+        line-height: 28px;
+        max-width: 750px;
+        margin: 0 auto;
+        margin-bottom: 120px;
+    }
   }

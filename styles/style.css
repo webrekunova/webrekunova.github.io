@@ -707,9 +707,9 @@ h2{
 .chameleon-wr{
     position: relative;
     height: 30px;
-    background: #848484;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    background: linear-gradient(-19deg, #774298, #ff7dc4);
+    border-top: 3px solid #633c7b;
+    border-bottom: 3px solid #652448;
 }
 #chameleon{
     width: 225px;
@@ -839,11 +839,14 @@ h2{
 .about-wr{
     font-family: 'Avenir';
     overflow: hidden;
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 400;
 }
 .about-text{
     max-width: 48%;
-    font-size: 22px;
-    line-height: 29px;
+    /* font-size: 22px; */
+    /* line-height: 29px; */
     font-family: 'Avenir';
     display: block;
     float: left;
@@ -860,8 +863,7 @@ h2{
 .detail-key{
     color: var(--hover);
     font-weight: 800;
-    font-size: 22px;
-    line-height: 29px;
+
     width: 20%;
     text-align: right;
     display: block;
@@ -871,11 +873,9 @@ h2{
     display: block;
     float: right;
     width: 76%;
-    font-size: 22px;
-    line-height: 29px;
+    /* font-size: 22px; */
+    /* line-height: 29px; */
     color: var(--dark);
-    font-weight: 400;
-    word-wrap: break-word;
     text-align: left;
 }
 /*ABOUT US*/
@@ -981,7 +981,18 @@ footer .wr{
     padding-bottom:15px;
 }
 
+@media screen and (max-width: 1480px){
+    .about-wr{
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 500;
+    }
+}
   @media screen and (max-width: 1100px){
+    .about-wr{
+        font-size: 16px;
+        line-height: 24px;
+    }
     .about-detail{
         margin-top: 80px;
         max-width: 100%;
@@ -999,9 +1010,6 @@ footer .wr{
     }
     .detail-key{
         font-size: 22px;
-    }
-    .detail-value{
-        font-weight: 500;
     }
     .tile{
         flex-basis: 300px;
@@ -1186,24 +1194,18 @@ footer .wr{
   }
   @media screen and (max-width: 960px){
     .head-text{
-
-right: -256px;
-
-line-height: 24px;
-
-font-size: 20px;
-}
+        right: -256px;
+        line-height: 24px;
+        font-size: 20px;
+    }
     .type2{
         top: 68px;
     }
     .arrow{
-
-right: -136px;
-
-width: 100px;
-
-top: 85px;
-}
+        right: -136px;
+        width: 100px;
+        top: 85px;
+    }
   }
   @media screen and (max-width: 620px){
     .detail-value{
@@ -1232,7 +1234,7 @@ top: 85px;
     }
     .header-text{
         font-size: 20px;
-        line-height: 23px;
+        line-height: 24px;
         margin: 40px auto;
     }
     .header-title{
@@ -1300,7 +1302,7 @@ top: 85px;
         font-weight: 500;
     }
     .about-detail{
-        width: 80%;
+        width: 83%;
         margin-top: 40px;
     }
 
@@ -1309,10 +1311,9 @@ top: 85px;
         font-size: 10px
     }
     .about-text{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
         text-align: left;
-
     }
     .title{
         font-size: 40px;

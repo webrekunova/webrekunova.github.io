@@ -61,8 +61,45 @@
 .campaign-preview-link{
     z-index: 2;
     position: absolute;
-    cursor: url("../assets/img/cursor_pointer.svg"), pointer;
+    cursor: url("../assets/img/cursor_hand.svg"), pointer;
     top: 0;
+}
+  .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--secondary);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: "Avenir";
+    font-size: 12px;
+    line-height: 14px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 11%;
+    font-weight: 200;
+    left: 85%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.campaign-preview-link:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 .bg{
     width: 100%;
@@ -112,6 +149,7 @@
     background: var(--hover);
     padding: 0 50px;
     margin-top: 0;
+    position: relative;
 }
 .campaign-button:hover{
     background: var(--contrast);
@@ -130,6 +168,32 @@
 }
 .campaign-button-link:hover{
     color: var(--dark);
+}
+.campaign-button:hover .button-hint{
+  visibility: visible;
+  opacity: 1;
+}
+.button-hint{
+    visibility: hidden;
+    width: 167px;
+    /* background-color: #555; */
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: "Avenir";
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 14px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: -47%;
+    left: 48px;
+    margin-left: -60px;
+        /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 .back-button{
     background: url("../assets/img/back2.svg") no-repeat;
