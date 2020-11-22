@@ -50,10 +50,11 @@
     vertical-align: middle;
     line-height: 40px;
     opacity:0;
-    transition:0.5s;
+    transition: opacity 0.5s;
 }
 .web-project:hover {
-    background:var(--hover);
+    background:var(--hover)!important;
+    background-blend-mode: initial!important;
     cursor: url("../assets/img/cursor_pointer.svg") pointer;
 }
 .web-project:hover .web-link-name {
@@ -62,17 +63,20 @@
     cursor: url("../assets/img/cursor_pointer.svg") pointer;
 }
 .gmt{
-    background: url("../assets/img/gmt.jpg") no-repeat;
+    background: url("../assets/img/gmt.jpg");
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .ballet{
-    background: url("../assets/img/ballet.jpg") no-repeat;
+    background: url("../assets/img/ballet.jpg");
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .ukrspec{
-    background: url("../assets/img/urkspec.jpg") no-repeat;
+    background: url("../assets/img/urkspec.jpg");
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -107,12 +111,29 @@
         opacity:1;
         z-index: 2;
     }
-    .web-project::before{
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #0000006b;
-        position: absolute;
+    .gmt{
+        background: url("../assets/img/gmt.jpg"), rgb(0 0 0 / 56%);
+        background-blend-mode: darken;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+    .ballet{
+        background: url("../assets/img/ballet.jpg"),  rgb(0 0 0 / 56%);
+        background-blend-mode: darken;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+    .ukrspec{
+        background: url("../assets/img/urkspec.jpg"), rgb(0 0 0 / 56%);
+        background-blend-mode: darken;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
     }
 
   }
