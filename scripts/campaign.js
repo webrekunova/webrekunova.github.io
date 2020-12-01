@@ -43,7 +43,6 @@ function renderCampaign(campaign) {
     })
 
     {
-        hint.innerText = "*to see desktop version please use desktop device";
         url.addEventListener('click', () => {
             if (window.innerWidth < 600) {
                 window.open(campaign.mob);
@@ -53,13 +52,18 @@ function renderCampaign(campaign) {
     }
 
 }
-if (window.innerWidth < 600) {
-    hint.innerText = "*to see desktop version please use desktop device";
 
-}
-else {
-    hint.innerText = "*please turn off AdBlock";
-}
+$(window).on('resize', function () {
+    if (window.innerWidth < 600) {
+        hint.innerHTML = "*to see desktop version please use desktop device";
+        console.log('ff')
+    }
+    else {
+        hint.innerHTML = "*please turn off AdBlock";
+        console.log(hint.innerHTML)
+    }
+});
+
 
 const campaigns = [
     {
@@ -207,7 +211,7 @@ const campaigns = [
         name: "carolina herrera",
         format: "Responsive rich media advert with multiple messaging features",
         services: "Design, build, animation",
-        description: "This luxurious campaign for women's perfume is  an example of a good choice of colors and matching full-width video animation on the top. When a user starts to scroll down a full variety of fragnances reveals. Shining gold behind the bottle adds magic and power to the product.",
+        description: "This luxurious campaign for women's perfume is  an example of a good choice of colors and matching full-width video animation on the top. When a user starts to scroll down a full variety of fragrances reveals. Shining gold behind the bottle adds magic and power to the product.",
         url: "https://insk.in/tu47qk",
         mob: "https://insk.in/5ji3d8",
         videoUrl: "../assets/video/goodgirl.mp4"
