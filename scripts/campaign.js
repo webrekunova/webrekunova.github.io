@@ -53,6 +53,15 @@ function renderCampaign(campaign) {
 
 }
 
+if (window.innerWidth < 600) {
+    hint.innerHTML = "*to see desktop version please use desktop device";
+    console.log('ff')
+}
+else {
+    hint.innerHTML = "*please turn off AdBlock";
+    console.log(hint.innerHTML)
+}
+
 $(window).on('resize', function () {
     if (window.innerWidth < 600) {
         hint.innerHTML = "*to see desktop version please use desktop device";
