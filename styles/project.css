@@ -20,7 +20,7 @@
 .campaign-wr{
     display: flex;
     padding-top: 70px!important;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .campaign-content{
     width: 50%;
@@ -253,6 +253,10 @@
         /* left: 6%; */
         top: 43px;
     }
+    .pc-wr {
+        transform: scale(0.75);
+        top: -92px;
+    }
 }
 @media screen and (max-width: 1155px){
     .campaign-preview{
@@ -260,13 +264,16 @@
     }
 }
 @media screen and (max-width: 1142px){
-    .pc-wr{
-
-    }
     .campaign-preview{
         left: 40%;
         /* top: 42px; */
     } 
+}
+@media screen and (max-width: 1050px){
+    .pc-wr {
+        transform: scale(1);
+        top: 0;
+    }
 }
 
 @media screen and (max-width: 980px){
