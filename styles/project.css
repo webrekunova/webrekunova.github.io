@@ -31,7 +31,7 @@
   min-width: 547px;
   width: 100%;
   position: relative;
-  background: url("../assets/img/pc5.svg") no-repeat;
+  /* background: url("../assets/img/pc5.svg") no-repeat; */
   background-position: center top;
   background-size: 100%;
   /* top: -5%; */
@@ -48,21 +48,22 @@
     /* left: 0; */
 }
 .campaign-preview{
-    width: 72%;
-    height: 59%;
-    position: relative;
+    width: 74%;
+    height: 100%;
+    position: absolute;
     z-index: -1;
-    left: 56px;
+    left: 40%;
     background-size: cover;
     top: 50px;
     overflow: hidden;
-    transform: skew(-4deg, 1deg);
+    transform: skew(-4deg, 1deg) translateX(-50%);
 }
 .campaign-preview-link{
     z-index: 2;
     position: absolute;
     cursor: url("../assets/img/cursor_hand.svg"), pointer;
     top: 0;
+    height: 56%;
 }
   .tooltiptext{
     visibility: hidden;
@@ -147,7 +148,7 @@
 }
 .campaign-button{
     background: var(--hover);
-    padding: 0 50px;
+    /* padding: 0 50px; */
     margin-top: 0;
     position: relative;
 }
@@ -230,11 +231,14 @@
     left: 1px;
     box-sizing: border-box;
     padding-top: 9px;
-    /* position: absolute; */
+    position: absolute;
     background-image: url("../assets/img/arrow.svg");
     background-repeat: no-repeat;
     background-position: 80px center;
     background-size: 40px 40px;
+}
+.monitor{
+    width: 100%;
 }
 .back-button-link:hover {
     width: 148px;
@@ -246,7 +250,7 @@
 }
 @media screen and (max-width: 1450px){
     .campaign-preview{
-        left: 6%;
+        /* left: 6%; */
         top: 43px;
     }
 }
@@ -260,7 +264,7 @@
 
     }
     .campaign-preview{
-        left: 30px;
+        left: 40%;
         /* top: 42px; */
     } 
 }
@@ -282,7 +286,7 @@
         /* margin-bottom: 2%; */
     }
     .campaign-preview{
-        left: 5%;
+        /* left: 5%; */
         top: 30px;
     }
 }
@@ -312,7 +316,7 @@
 
     }
     .campaign-preview{
-        left: 16px;
+        /* left: 16px; */
         top: 16px;
     }
     .campaign-info-item:nth-child(1) {
@@ -335,7 +339,7 @@
 
     }
     .campaign-preview{
-        left: 16px;
+        /* left: 16px; */
         top: 16px;
     }
 

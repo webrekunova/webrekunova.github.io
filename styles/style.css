@@ -64,6 +64,7 @@ h2{
 
     height: 54px;
     width: 208px;
+    padding:0;
     border: none;
     outline: none;
     cursor: url("../assets/img/cursor_hand.svg"), pointer;
@@ -521,14 +522,14 @@ h2{
     background-size: 60%;
     background-position: center;
 }
-.adobe{
-    background: url("../assets/img/adobe.jpg") no-repeat;
+.jbl{
+    background: url("../assets/img/jbl.jpg") no-repeat;
     background-size: 100%;
     background-position: center;
 }
-#adobe_logo{
-    background: url("../assets/img/adobe_logo.png") no-repeat;
-    background-size: 21%;
+#jbl_logo{
+    background: url("../assets/img/jbl_logo.png") no-repeat;
+    background-size: 45%;
     background-position: center;
 }
 .fitbit{
@@ -611,13 +612,13 @@ h2{
     background-size: 60%;
     background-position: center ;
 }
-.mariott{
-    background: url("../assets/img/mariott.jpg") no-repeat;
+.goodgirl{
+    background: url("../assets/img/goodgirl2.jpg") no-repeat;
     background-size: 100%;
     background-position: center;
 }
-#mariott_logo{
-    background: url("../assets/img/mariott_logo.png") no-repeat;
+#goodgirl_logo{
+    background: url("../assets/img/goodgirl_logo.png") no-repeat;
     background-size: 60%;
     background-position: center ;
 }
@@ -930,14 +931,14 @@ footer{
     font-family: 'Avenir';
     color: white;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 52px;
     text-align: right;
 }
 .call{
-    margin-top: 17px;
+    margin-top: -11px;
 }
 .footer-icons{
-    margin-top: 60px;
+    margin-top: 47px;
 }
 .footer-icon svg{
      fill: var(--selected);
@@ -986,6 +987,56 @@ footer .wr{
         font-size: 20px;
         line-height: 26px;
         font-weight: 500;
+    }
+    .me {
+        width: 209px;
+        /* min-height: 250px; */
+        margin: 0px auto 10px;
+        position: relative;
+        height: 233px;
+    }
+    .head-text{
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .header-title{
+        font-size: 36px;
+        margin-top: 38px;
+    }
+    .header-text{
+        margin-bottom: 30px;
+        margin-top: 22px;
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .header-logo{
+        width: 95px;
+    }
+    .arrow {
+        position: absolute;
+        right: -179px;
+        top: 84px;
+        width: 83px;
+    }
+    .tile{
+        height: 250px;
+        flex-basis: 250px;
+    }
+    .header-line{
+        margin-bottom: 50px;
+        margin-top: -20px;
+    }
+    .wr {
+        max-width: 1440px;
+        padding: 70px 70px;
+        margin: 0 auto;
+    }
+    .studies-wr {
+        margin-top: 80px;
+        margin-bottom: 88px;
+    }
+    .about .title{
+        margin-bottom: 70px
     }
 }
   @media screen and (max-width: 1100px){
@@ -1138,7 +1189,7 @@ footer .wr{
      }
      .footer-icons{
          float: none;
-         margin-top: 30px
+         margin-top: 21px;
      }
      .footer-icons li{
          padding-left: 0;
@@ -1146,13 +1197,13 @@ footer .wr{
      }
      .footer-button{
          position: absolute;
-         top: 190px;
+         top: 218px;
      }
      .footer-right a{
          font-size: 20px;
      }
      .call{
-         margin-top: 3px;
+         margin-top: -19px;
      }
      .footer-city{
          font-size: 20px
@@ -1330,6 +1381,7 @@ footer .wr{
         margin-bottom: 60px;
         margin-left: -14px;
         margin-right: -14px;
+        margin-top: 0;
     }
     .header-logo{
         height: 47px;
@@ -1384,4 +1436,5 @@ footer .wr{
       .opened{
             padding-top: 34px;
       }
+
   }
