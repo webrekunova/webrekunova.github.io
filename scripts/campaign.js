@@ -220,7 +220,7 @@ const campaigns = [
         name: "carolina herrera",
         format: "Responsive rich media advert with multiple messaging features",
         services: "Design, build, animation",
-        description: "This luxurious campaign for women's perfume is  an example of a good choice of colors and matching full-width video animation on the top. When a user starts to scroll down a full variety of fragrances reveals. Shining gold behind the bottle adds magic and power to the product.",
+        description: "This luxurious campaign for women's perfume is  an example of a good selection of colours and matching full-width video animation on the top. When a user starts to scroll down a full variety of fragrances reveals. The shining gold behind the bottle adds a magical effect to highlight the product.",
         url: "https://insk.in/tu47qk",
         mob: "https://insk.in/5ji3d8",
         videoUrl: "../assets/video/goodgirl.mp4"
