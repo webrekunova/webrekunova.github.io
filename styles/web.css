@@ -80,6 +80,23 @@
     background-position: center;
     background-size: cover;
 }
+@media screen and (max-width: 1480px){
+    .web-descritption{
+        margin-bottom: 85px;
+    }
+    .web-project{
+    max-width: 350px;
+    height: 350px;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 350px;
+    /* height: auto; */
+    flex-grow: 1;
+    cursor: url("../assets/img/cursor_pointer.svg") pointer;
+}
+}
 @media screen and (max-width: 1280px){
     .web-project{
         height: 360px;

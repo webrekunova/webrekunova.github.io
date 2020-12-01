@@ -44,3 +44,22 @@ table {
 a {
 	text-decoration: none;
 }
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e2dede;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e2007c;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e2007c; 
+  }

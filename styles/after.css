@@ -113,7 +113,18 @@
 
 
 
+@media screen and (max-width: 1480px){
+    .tv-wr{
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 
+}
+@media screen and (max-width: 1080px){
+    .tv-wr{
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+}
 
 @media screen and (max-width:700px){
     #video-preloader{
