@@ -300,6 +300,28 @@
     }
 
 }
+@media screen and (max-width: 600px){
+    .button-hint {
+        visibility: visible;
+        width: 200px;
+        /* background-color: #555; */
+        color: #fff;
+        text-align: left;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-family: "Avenir";
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 14px;
+        position: absolute;
+        z-index: 1;
+        top: 112%;
+        left: 60px;
+        margin-left: -60px;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+}
 @media screen and (max-width: 415px){
     .pc-wr{
         height: 283px;
