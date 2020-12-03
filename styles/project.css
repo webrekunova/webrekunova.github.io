@@ -196,58 +196,61 @@
     opacity: 0;
     transition: opacity 0.3s;
 }
-.back-button{
-    background: url("../assets/img/back2.svg") no-repeat;
+.button-wr{
     position: absolute;
     right: 6%;
-    height: 67px;
+    bottom: 6%;  
+    height: 55px;
     width: 163px;
+}
+.back-button{
     background-size: contain;
-    bottom: 6%;
-    border: none;
+    width: 146px;
+    height: 100%;
+    background-color: #f7e1cd;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 14px;
+    box-sizing: border-box;
+    padding-top: 9px;
+    position: absolute;
+    /* border: none; */
     outline: none;
-    /* margin-top: 200px; */
+    bottom:0;
+    right:0;
+    box-shadow: 2px 1px 0px #a99484, 4px 2px 0px #a99484, 4px 4px 0px #a99484, 2px 3px 0px #a99484, 3px 4px 0px #a99484, 4px 5px 0px #a99484;
 }
-/* .back-button:hover{
-    width: 150px;
-    height: 63px;
+.back-button:hover{
+    box-shadow: none;
+    right: -6px;
+    bottom: -6px;
+    transition: top left 0.2s;
 }
-.back-button:hover .back-button-link{
-  left:3px;
-} */
+
 .back-button-link{
     font-family: 'Conv_Anonymous_Pro_B';
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 25px;
+    line-height: 29px;
     height: 53px;
     /* top: 1px; */
     color: black;
     text-align: left;
-    width: 141px;
-    background-color: #daceac;
-    border-radius: 5px;
-    border: 2px solid black;
-    padding-left: 14px;
-    left: 1px;
-    box-sizing: border-box;
-    padding-top: 9px;
-    position: absolute;
     background-image: url("../assets/img/arrow.svg");
     background-repeat: no-repeat;
-    background-position: 80px center;
+    background-position: 81px 8px;
     background-size: 40px 40px;
 }
 .monitor{
     width: 100%;
 }
-.back-button-link:hover {
+/* .back-button-link:hover {
     width: 148px;
     height: 61px;
     top: 1;
     left:1;
     padding-top: 14px;    
 
-}
+} */
 @media screen and (max-width: 1450px){
     .campaign-preview{
         /* left: 6%; */
@@ -281,6 +284,9 @@
 }
 
 @media screen and (max-width: 980px){
+    .button-wr{
+        display: none;
+    }
     .campaign-wr{
         /* display: block; */
         height: initial;
@@ -312,6 +318,7 @@
 
 }
 @media screen and (max-width: 600px){
+
     .button-hint {
         visibility: visible;
         width: 200px;

@@ -193,3 +193,4 @@ window.addEventListener('scroll', function () {
     pageYOffset > projectsWrapperTopCoordinate && showCampaigns()
 
 });
+

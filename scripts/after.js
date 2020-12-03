@@ -9,9 +9,18 @@ const container = document.querySelector('.body-after');
 const remoteHeight = pointer.getBoundingClientRect().height
 const saveBottomArea = windowHeight - remoteHeight;
 const videoLoader = document.getElementById('video-preloader');
-
+const buttonWr = document.querySelector('.button-wr')
 window.addEventListener('mousemove', function (ev) {
     const X = ev.pageX;
+    // if(ev.target.classList.contains('button-wr')){
+    //     pointer.style.display="none";
+    //     container.style.cursor = `url("../assets/img/cursor.svg"), default !importnat` ;
+
+    // }
+    // else{
+    //     pointer.style.display = "block";
+    //     container.style.cursor = `url("../ assets / img / finger.png"), default !important`;
+    // }
     let Y
     if (ev.pageY > saveBottomArea) {
         Y = saveBottomArea

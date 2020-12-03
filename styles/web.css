@@ -80,6 +80,11 @@
     background-position: center;
     background-size: cover;
 }
+.body-after .button-wr{
+    width: 177px;
+    height: 200px;
+}
+
 @media screen and (max-width: 1480px){
     .web-descritption{
         margin-bottom: 85px;

@@ -79,7 +79,7 @@ const campaigns = [
         name: "wyevale",
         format: "Desktop rich media advert",
         services: "Design, build, animation",
-        description: "Wyevale garden centres used bright colors and beautiful flowers in their spring campaign.  To emphasize the main message 'Spring has sprung' I made the plants grow across the screen. By changing copies along with background on scroll we give users control and make the campaign more alive and interactive.",
+        description: "Wyevale garden centres used bright colors and beautiful flowers in their Spring campaign.  To emphasize the main message 'Spring has sprung' I made the plants grow across the screen. By changing copy along with background on scroll we give users control and make the campaign more alive and interactive.",
         url: "https://insk.in/v218t6",
         mob: "https://insk.in/db960y",
 
@@ -110,7 +110,7 @@ const campaigns = [
         name: "fitbit",
         format: "Shoppable rich media advert",
         services: "Design, build, animation",
-        description: "A shoppable advert that allows us to focus on 4 main products. The slider on the right allows a user to switch between scenes and works when the user scrolls the page. On the left, we can receive additional information about color variations and prices. Besides, small details as a hover effect on call to action button and watches, the smooth appearance of colors, shine and Christmas decor make the ad interactive and magical.",
+        description: "A shoppable advert that allows us to focus on 4 main products. The slider on the right allows a user to switch between watches and works when the user scrolls the page. On the left, we can receive additional information about color variations and prices. I included other small details as a hover effect on call to action button and watches, the smooth appearance of colors, shine and Christmas decor to make the ad interactive and magical.",
         url: "https://insk.in/o1yt42",
         mob: "https://insk.in/0m73h8",
         videoUrl: "../assets/video/fitbit.mp4"
@@ -170,7 +170,7 @@ const campaigns = [
         name: "boursin",
         format: "Responsive rich media advert",
         services: "Build, animation",
-        description: "A beautiful layout that Boursin shared could only be complemented with a nice animation. And that's what I did. Two hands moving towards each other highlight joy of sharing cooking process. Dipping, smoothing and crumbling animations emphasize the variety  of serving, tastes and recipes which users might achieve with buying these products.",
+        description: "A beautiful layout that Boursin shared could only be complemented with a nice animation. And that's what I did. Two hands moving towards each other highlight the joy of sharing the cooking process. Dipping, smoothing and crumbling animations emphasize the variety  of serving, tastes and recipes which users might achieve with buying these products.",
         url: "https://insk.in/9015a7",
         mob: "https://insk.in/6f34qu",
         videoUrl: "../assets/video/boursin.mp4"
@@ -180,7 +180,7 @@ const campaigns = [
         name: "glyndebourne",
         format: "Desktop rich media advert",
         services: "Design, build, animation",
-        description: "A trick with this campaign was in finding a proper composition for illustration. So it could be visible  for all resolution despite the fact that ad is not responsive. The animation of revealing beautiful graphic elements from the main building shows how music and joy are spreading from Glyndebourne's opera house. In conclusion, I make singing mouthes highlight one by one when a user scrolls down the page.",
+        description: "A trick with this campaign was in finding a proper composition for illustration. So it could be visible  for all resolution despite the fact that ad is not responsive. The animation of revealing beautiful graphic elements from the main building shows how music and joy are spreading from Glyndebourne's opera house. In conclusion, I make singing mouths highlight one by one when a user scrolls down the page.",
         url: "https://insk.in/xb0tbx",
         mob: "https://insk.in/ko4rew",
         videoUrl: "../assets/video/glyndebourne.mp4"
@@ -190,7 +190,7 @@ const campaigns = [
         name: "simple",
         format: "Desktop rich media advert",
         services: "Design, build, animation",
-        description: "The design is based on a comic style poster that Simple shared with us. I struggled to make a well-balanced composition that not only fits the safe area but also tells us a story and promotes the product. With user tendentious to look from left to right, on the header scene I guided the story the same way. When the user scrolls further I put the product on the left so it's always in view.  Meanwhile, the right side is animating to inspire a user to an action.",
+        description: "The design is based on a comic style poster that Simple shared with us. I struggled to make a well-balanced composition that not only fits the safe area but also tells us a story and promotes the product. With user tendencies to look from left to right, on the header scene I guided the story the same way. When the user scrolls further I put the product on the left so it's always in view.  Meanwhile, the right side is animating to inspire a user to an action.",
         url: "https://insk.in/59xm89",
         mob: "https://insk.in/j16z1t",
         videoUrl: "../assets/video/simple.mp4"
@@ -200,7 +200,7 @@ const campaigns = [
         name: "oral-b",
         format: "Responsive rich media advert",
         services: "Design, build, animation",
-        description: "In this campaign, I wanted to focus on powerful graphics that Oral-B presented in their commercial. By making sides swop on the scroll we give control to users and attract their attention. While the video is playing on one side the toothpaste is always visible on another. This allows us to receive sufficient focus on the promoting product. Creative is complete with small secondary animation, hover & logo flashes.",
+        description: "In this campaign, I wanted to focus on powerful graphics that Oral-B presented in their commercial. By making sides swap on the scroll we give control to users and attract their attention. While the video is playing on one side the toothpaste is always visible on another. This allows us to receive sufficient focus on the promoting product. Creative is complete with small secondary animation, hover & logo flashes.",
         url: "https://insk.in/v8f791",
         mob: "https://insk.in/48lbr4",
         videoUrl: "../assets/video/oralb.mp4"
@@ -210,7 +210,7 @@ const campaigns = [
         name: "ugg",
         format: "Shoppable media advert",
         services: "Design, build, animation",
-        description: "A shoppable skin for women shoes, that gives a user an ability to choose a colour and switch between products. With simple and not intrusive texture, good matching images and its asymmetrical but well-balanced design this campaign looks stylish and smart. And that's the goal.",
+        description: "A shoppable skin for women shoes, that gives a user an ability to choose a colour and switch between products. With simple and non-intrusive texture, good matching images and its asymmetrical but well-balanced design this campaign looks stylish and smart. And that's the goal.",
         url: "https://insk.in/9f3ev6",
         mob: "https://insk.in/69ubv0",
         videoUrl: "../assets/video/ugg.mp4"
