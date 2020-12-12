@@ -15,7 +15,7 @@
     overflow-x: hidden;
 }
 .page-container{
-    /* background: var(--dark); */
+    /* position: relative; */
 }
 .campaign-wr{
     display: flex;
@@ -205,38 +205,20 @@
 }
 .back-button{
     background-size: contain;
-    width: 146px;
-    height: 100%;
-    background-color: #f7e1cd;
     border-radius: 5px;
-    border: 1px solid black;
     padding-left: 14px;
-    box-sizing: border-box;
     padding-top: 9px;
     position: absolute;
-    /* border: none; */
-    outline: none;
-    bottom:0;
-    right:0;
-width: 142px;
-height: 49px;
-background: #F7E1CD;
-border: 2px solid #000000;
-box-sizing: border-box;
-box-shadow: 4px 5px 0px #A99484, 2px 3px 0px #A99484, 5px 6px 0px #A99484, 3px 4px 0px #A99484, 2px 3px 0px #A99484;
-}
-.back-button:hover{
-    box-shadow: none;
-    right: 43px;
-    bottom: 41px;
-    transition: top left 0.2s;
-}
-
-.back-button-link{
+    width: 142px;
+    height: 49px;
+    background: #F7E1CD;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 4px 5px 0px #A99484, 2px 3px 0px #A99484, 5px 6px 0px #A99484, 3px 4px 0px #A99484, 2px 3px 0px #A99484;
     font-family: 'Conv_Anonymous_Pro_B';
     font-size: 25px;
     line-height: 29px;
-    height: 53px;
+    /* height: 53px; */
     bottom: 50px;
     right: 50px;
     color: black;
@@ -245,6 +227,12 @@ box-shadow: 4px 5px 0px #A99484, 2px 3px 0px #A99484, 5px 6px 0px #A99484, 3px 4
     background-repeat: no-repeat;
     background-position: 82px 4px;
     background-size: 40px 40px;
+}
+.back-button:hover{
+    box-shadow: none;
+    right: 43px;
+    bottom: 41px;
+    transition: top left 0.2s;
 }
 .monitor{
     width: 100%;
@@ -299,6 +287,9 @@ box-shadow: 4px 5px 0px #A99484, 2px 3px 0px #A99484, 5px 6px 0px #A99484, 3px 4
         flex-direction: column-reverse;
         justify-content: flex-end;
     }
+    .page-container{
+        position: relative;
+    }
     .campaign-content{
         width: 100%;
     }
@@ -320,6 +311,9 @@ box-shadow: 4px 5px 0px #A99484, 2px 3px 0px #A99484, 5px 6px 0px #A99484, 3px 4
         height: 500px;
         max-width: 80%;
         /* margin-bottom: 2%; */
+    }
+    .back-button{
+        display: none;
     }
 
 }

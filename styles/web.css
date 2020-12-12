@@ -131,6 +131,9 @@
         max-width: 300px;
         flex-grow:1;
     }
+    .web-container{
+        position: relative;
+    }
 }
 
  /* IPHONE X*/
