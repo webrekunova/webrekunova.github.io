@@ -90,8 +90,8 @@
         margin-bottom: 85px;
     }
     .web-project{
-    max-width: 350px;
-    height: 350px;
+    max-width: 300px;
+    height: 300px;
     /* height: 100%; */
     display: flex;
     align-items: center;
@@ -100,11 +100,21 @@
     /* height: auto; */
     flex-grow: 1;
     cursor: url("../assets/img/cursor_pointer.svg") pointer;
-}
+    }
+    .web-description{
+        font-family: 'Avenir';
+        color: var(--contrast);
+        font-size: 27px;
+        text-align: center;
+        line-height: 34px;
+        max-width: 675px;
+        margin: 0 auto;
+        margin-bottom: 51px;
+    }
 }
 @media screen and (max-width: 1280px){
     .web-project{
-        height: 360px;
+        height: 300px;
     }
 }
 @media screen and (max-width: 1090px){
@@ -117,8 +127,9 @@
         flex-wrap: wrap;
     }
     .web-project{
-        height: 450px;
-        max-width: 450px;
+        height: 300px;
+        max-width: 300px;
+        flex-grow:1;
     }
 }
 

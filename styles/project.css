@@ -218,12 +218,17 @@
     outline: none;
     bottom:0;
     right:0;
-    box-shadow: 2px 1px 0px #a99484, 4px 2px 0px #a99484, 4px 4px 0px #a99484, 2px 3px 0px #a99484, 3px 4px 0px #a99484, 4px 5px 0px #a99484;
+width: 142px;
+height: 49px;
+background: #F7E1CD;
+border: 2px solid #000000;
+box-sizing: border-box;
+box-shadow: 4px 5px 0px #A99484, 2px 3px 0px #A99484, 5px 6px 0px #A99484, 3px 4px 0px #A99484, 2px 3px 0px #A99484;
 }
 .back-button:hover{
     box-shadow: none;
-    right: -6px;
-    bottom: -6px;
+    right: 43px;
+    bottom: 41px;
     transition: top left 0.2s;
 }
 
@@ -232,12 +237,13 @@
     font-size: 25px;
     line-height: 29px;
     height: 53px;
-    /* top: 1px; */
+    bottom: 50px;
+    right: 50px;
     color: black;
     text-align: left;
     background-image: url("../assets/img/arrow.svg");
     background-repeat: no-repeat;
-    background-position: 81px 8px;
+    background-position: 82px 4px;
     background-size: 40px 40px;
 }
 .monitor{

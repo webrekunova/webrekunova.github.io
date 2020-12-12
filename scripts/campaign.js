@@ -130,7 +130,7 @@ const campaigns = [
         name: "honda",
         format: "Responsive rich media advert with multiple messaging features",
         services: "Design, build, animation",
-        description: `A solid design that represents the main motto of the campaign "Two races one heartbeat".  Sport cars on the left are following with corresponding video teasers. Users may click through them and watch a full version of each one. On the right - the classic cars with their main features. The animating beam across the creative and flashing headlights work to bring users' attention. Navigation buttons help users to toggle between products easily.`,
+        description: `A relevant design that represents the main motto of the campaign "Two races one heartbeat".  Sport cars on the left are following with corresponding video teasers. Users may click through them and watch a full version of each one. On the right - the classic cars with their main features. The animating beam across the creative and flashing headlights work to bring users' attention. Navigation buttons help users to toggle between products easily.`,
         url: "https://insk.in/6of7et",
         mob: "https://insk.in/r8hbit",
         videoUrl: "../assets/video/honda.mp4"
